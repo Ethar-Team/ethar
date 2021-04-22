@@ -67,6 +67,14 @@ function handleSubmit(event){
 
 }
 
+Donation.prototype.getCheck = function(){
+    alert('hello');
+
+}
+
+let x= new Donation('a','a','a','a');
+x.getCheck();
+
 
 function render(){
     let Di=document.createElement('div');
@@ -98,6 +106,8 @@ function render(){
 
 }
 
+let but=document.createElement('button');;
+//but.setAttribute("id","butt");
 function renderls(){
     
     for(let i=0;i<Donation.allItems.length;i++){
@@ -122,11 +132,19 @@ function renderls(){
     Di.appendChild(contact);
     contact.textContent=`${Donation.allItems[i].contInfo}`;
 
-    let but=document.createElement('button');
+    but=document.createElement('button');
     Di.appendChild(but);
     but.textContent="Book It!";
 
      }
+     
+}
+
+
+
+function handlebutton(){
+    alert("You Book It");
+
 }
 
 
