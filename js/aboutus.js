@@ -20,12 +20,12 @@ function About (name,breif,linkedin,github,imgUrl){
 About.allPeople=[];
 //adding the instances
 new About('Ayyoub Alkeyyam','Lorem ipsum dolor sit amet consectetur adipisicing elit. Error doloribus dolor facilis expedita corporis dignissimos similique assumenda odit, reprehenderit qui neque necessitatibus praesentium quos, dolorum vel? Quidem exercitationem quam tempore!','http://www.linkedin.com/in/ayyoubk','https://github.com/ayyoubk','/images/Ayyoub.jpg');
-new About ('Shatha Alsmadi','Lorem ipsum dolor sit amet consectetur adipisicing elit. Error doloribus dolor facilis expedita corporis dignissimos similique assumenda odit, reprehenderit qui neque necessitatibus praesentium quos, dolorum vel? Quidem exercitationem quam tempore!','https://www.linkedin.com/in/shatha-al-smadi-5348021ab/','https://github.com/shathasmadi');
-new About ('Roaa Mustafa','Lorem ipsum dolor sit amet consectetur adipisicing elit. Error doloribus dolor facilis expedita corporis dignissimos similique assumenda odit, reprehenderit qui neque necessitatibus praesentium quos, dolorum vel? Quidem exercitationem quam tempore!','https://www.linkedin.com/in/roaa-mustafa98/','https://github.com/RoaaMustafa');
-new About ('Anas Abu-Galiha','Lorem ipsum dolor sit amet consectetur adipisicing elit. Error doloribus dolor facilis expedita corporis dignissimos similique assumenda odit, reprehenderit qui neque necessitatibus praesentium quos, dolorum vel? Quidem exercitationem quam tempore!','https://www.linkedin.com/in/anas-abughalieh-68b73a194/','https://github.com/AnasAGc');
-new About ('Abdullah Elian','Lorem ipsum dolor sit amet consectetur adipisicing elit. Error doloribus dolor facilis expedita corporis dignissimos similique assumenda odit, reprehenderit qui neque necessitatibus praesentium quos, dolorum vel? Quidem exercitationem quam tempore!','http://www.linkedin.com/in/abdullah-elian','https://github.com/AbdullahElian1');
-new About('Mohammad Hayagneh ','Lorem ipsum dolor sit amet consectetur adipisicing elit. Error doloribus dolor facilis expedita corporis dignissimos similique assumenda odit, reprehenderit qui neque necessitatibus praesentium quos, dolorum vel? Quidem exercitationem quam tempore!','https://www.linkedin.com/in/mohammad-hayajneh-2ab099124/','https://github.com/mohammadhayajneh2014');
-new About('Aysheh Abu mahfouz','Lorem ipsum dolor sit amet consectetur adipisicing elit. Error doloribus dolor facilis expedita corporis dignissimos similique assumenda odit, reprehenderit qui neque necessitatibus praesentium quos, dolorum vel? Quidem exercitationem quam tempore!','https://www.linkedin.com/in/aysheh-mahfouz-28a48a20b/','https://github.com/Aysheh-Mahfouz');
+new About ('Shatha Alsmadi','Lorem ipsum dolor sit amet consectetur adipisicing elit. Error doloribus dolor facilis expedita corporis dignissimos similique assumenda odit, reprehenderit qui neque necessitatibus praesentium quos, dolorum vel? Quidem exercitationem quam tempore!','https://www.linkedin.com/in/shatha-al-smadi-5348021ab/','https://github.com/shathasmadi','/mages/Shatha.jpg');
+new About ('Roaa Mustafa','Lorem ipsum dolor sit amet consectetur adipisicing elit. Error doloribus dolor facilis expedita corporis dignissimos similique assumenda odit, reprehenderit qui neque necessitatibus praesentium quos, dolorum vel? Quidem exercitationem quam tempore!','https://www.linkedin.com/in/roaa-mustafa98/','https://github.com/RoaaMustafa','/images/Roaa.jpg');
+new About ('Anas Abu-Galiha','Lorem ipsum dolor sit amet consectetur adipisicing elit. Error doloribus dolor facilis expedita corporis dignissimos similique assumenda odit, reprehenderit qui neque necessitatibus praesentium quos, dolorum vel? Quidem exercitationem quam tempore!','https://www.linkedin.com/in/anas-abughalieh-68b73a194/','https://github.com/AnasAGc','/images/Anas.jpg');
+new About ('Abdullah Elian','Lorem ipsum dolor sit amet consectetur adipisicing elit. Error doloribus dolor facilis expedita corporis dignissimos similique assumenda odit, reprehenderit qui neque necessitatibus praesentium quos, dolorum vel? Quidem exercitationem quam tempore!','http://www.linkedin.com/in/abdullah-elian','https://github.com/AbdullahElian1','/images/Abduulah.jpg');
+new About('Mohammad Hayagneh ','Lorem ipsum dolor sit amet consectetur adipisicing elit. Error doloribus dolor facilis expedita corporis dignissimos similique assumenda odit, reprehenderit qui neque necessitatibus praesentium quos, dolorum vel? Quidem exercitationem quam tempore!','https://www.linkedin.com/in/mohammad-hayajneh-2ab099124/','https://github.com/mohammadhayajneh2014','/images/Mohamme.jpg');
+new About('Aysheh Abu mahfouz','Lorem ipsum dolor sit amet consectetur adipisicing elit. Error doloribus dolor facilis expedita corporis dignissimos similique assumenda odit, reprehenderit qui neque necessitatibus praesentium quos, dolorum vel? Quidem exercitationem quam tempore!','https://www.linkedin.com/in/aysheh-mahfouz-28a48a20b/','https://github.com/Aysheh-Mahfouz','/images/Aysheh.jpg');
 let showEl = document.getElementById('sectwo');
 function render(index){
   let imgEl= document.createElement('img');
@@ -33,17 +33,45 @@ function render(index){
   showEl.appendChild(imgEl);
   let nameEl=document.createElement('h2');
   showEl.appendChild(nameEl);
-  nameEl.textContent=`${About.allPeople[index].name}`نكمل ;
+  nameEl.textContent=`${About.allPeople[index].name}`;
+  let linkOne =document.createElement('a');
+  linkOne.setAttribute('href',`${About.allPeople[index].linkedinAcc}`);
+  showEl.appendChild(linkOne);
+  let linkTwo =document.createElement('a');
+  linkTwo.setAttribute('href',`${About.allPeople[index].githubAcc}`);
+  showEl.appendChild(linkTwo);
 }
-render(0);
-//imgEl.setAttribute('src',About.allPeople[index].imgUrl); ---
-// function handleClicking(event) {
-//   event.preventDefault();
-//   render();
-//   container.removeEventListener('click',handleClicking);
-// }
+let count=0;
+// render(0);
+container.addEventListener('click',handleClicking);
+function handleClicking(event) {
+  event.preventDefault();
+  count++;
+  if (count >= 1){
+    if (event.target.id ==='ayyoub'){
+      render(0);
+    }else if (event.target.id ==='shatha') {
+      render(1);
+    } else if(event.target.id ==='roaa'){
+      render(2);
+    }else if(event.target.id ==='anas'){
+      render(3);
+    }else if(event.target.id ==='abdullah'){
+      render(4);
+    }else if(event.target.id ==='mohammed'){
+      render(5);
+    }else if(event.target.id ==='aysheh'){
+      render(6);
+    }else{
+      container.removeEventListener('click',handleClicking);
+    }
+
+
+  }
+  render();
+  container.removeEventListener('click',handleClicking);
+}
 // function render(){
-//   container.addEventListener('click',handleClicking);
 //   let showEl = document.getElementById('sectwo');
 
 //   for(let i = 0 ; i <About.allPeople.length;i++){
