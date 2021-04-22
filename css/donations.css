@@ -1,6 +1,9 @@
 #display-sec{
     width: 90%;
     background-color: #eee;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
 }
 
 .Items{
@@ -8,12 +11,33 @@
     display: inline-block;
     background-color: aqua;
     margin-left: 3%;
+    margin-bottom: 1%;
     padding: 20px;
-    border: 2px solid red;
+    border: 2px solid rgb(106, 106, 158);
+    text-align: center;
+    border-radius: 10%;
+}
+
+.Items h4,p{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  overflow: hidden;
 }
 
 .Items img{
+    margin-top: 5%;
     width: 100%;
+    
 
 }
 
+.Items button{
+    width: 51%;
+    height: 47px;
+    font-size: 1rem;
+    background-color: blanchedalmond;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -3%;
+}
