@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: whitesmoke;
+
+}
+
+
+#right{
+
+    float: right;
+    width: 50%;
+
+}
+
+#left{
+float: left;
+width: 50%;
+padding: 30px;
+
+}   
+#left p {
+
+    text-align: justify;
+
+}
