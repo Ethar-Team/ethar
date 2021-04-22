@@ -1,0 +1,20 @@
+header
+{
+    position: relative;
+}
+
+.logoAndText
+{
+    display: inline-block;
+
+}
+
+.logoText1
+{
+    position: absolute;
+    display: inline-block;
+    font-family: cursive;
+    font-size: larger;
+    margin-top: -0.2em;
+    margin-left: 0.1em;
+}
