@@ -1,0 +1,19 @@
+#display-sec{
+    width: 90%;
+    background-color: #eee;
+}
+
+.Items{
+    width: 23%;
+    display: inline-block;
+    background-color: aqua;
+    margin-left: 3%;
+    padding: 20px;
+    border: 2px solid red;
+}
+
+.Items img{
+    width: 100%;
+
+}
+
