@@ -18,3 +18,9 @@ Reflections and Comments
 
 - Consider including the answers to your daily journal and submission questions here
 - This is also a good place to reflect on the tools and resources used and learned
+
+## AYSHEH ##
+Hello , this is me 
+Today is 22.APR.2021 Thursday
+task #1 header & footer structure
+
