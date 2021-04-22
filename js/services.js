@@ -1,19 +1,17 @@
 'use sttict '
 
-let helpingArray=[];  
 let waitinglist=document.getElementById("waitingList")
-
+let array=[]
 function AskForHelp (names,countatNumber,helpTime){
 
     this.names=names;
     this.countatNumber=countatNumber;
     this.helpTime=helpTime;
-    helpingArray.push(this)
+    array.push(this)
 }
 
 let anas = new AskForHelp('anas','11','12')
-
-console.log(helpingArray.names)
+console.log(array[0].names)
 
 
 const helpingForm=document.getElementById("hepingForm")
