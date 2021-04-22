@@ -1,0 +1,24 @@
+html
+{
+    width: 920px;
+}
+header
+{
+    position: relative;
+}
+
+.logoAndText
+{
+    display: inline-block;
+
+}
+
+
+.logoText
+{
+    
+    display: inline-block;
+    font-family:  cursive;
+    font-size:larger;
+    
+}
