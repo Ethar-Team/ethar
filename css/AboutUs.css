@@ -1,5 +1,9 @@
-#secone img{
+img{
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+}
+main{
+    background-color: cadetblue;
 }
