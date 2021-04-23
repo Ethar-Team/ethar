@@ -56,3 +56,27 @@ text-align: center;
     margin-top: 30px;
     margin-left: 50%;
 }
+
+
+#building{
+
+    background-color:cornflowerblue;
+
+}
+#teaching{
+    background-color: cyan;
+}
+#carpenting{
+    background-color: darkorchid;
+}
+#plumbing{
+
+background-color: deeppink;
+}
+#painting{
+
+    background-color: gold;
+}
+#electric{
+    background-color: indigo;
+}
