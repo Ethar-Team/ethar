@@ -1,6 +1,8 @@
 
 header{
     background-color: #114E60;
+    position: fixed;
+    width: 100%;
 }
 header img{
     margin-left: 5px;
