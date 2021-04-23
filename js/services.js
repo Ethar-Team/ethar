@@ -14,25 +14,33 @@ let anas = new AskForHelp('anas','11','12')
 console.log(array[0].names)
 
 
-const helpingForm=document.getElementById("hepingForm")
-helpingForm.addEventListener('submit', helpTask)
+// const helpingForm=document.getElementById("hepingForm")
+// helpingForm.addEventListener('submit', helpTask)
+
+//     function helpTask (event){
+
+//         console.log(event)
+//         event.preventDefault()
+
+//         let newName=event.target.customername.value
+//         let newContact=event.target.customercontact.value
+//         let newTime=event.target.time.value
+
+//         let Newhelp= new AskForHelp(newName,newContact,newTime)
+
+// }
 
 
 
- function helpTask (event){
-
-    event.preventDefault()
-
-    let newName=event.target.customername.value
-    let newContact=event.target.customercontact.value
-    let newTime=event.target.time.value
-
-    let Newhelp= new AskForHelp(newName,newContact,newTime)
-
-}
-
-
-
+const cards=document.getElementById("right")
+const container=document.getElementById("left")
+cards.addEventListener('click',renderform)
+ 
+    function renderform (event){
+        let title=document.createElement("h2")
+        container.appendChild(title)
+        console.log(event.target.id)
+    }
 
 
 let list=document.createElement("ul")
