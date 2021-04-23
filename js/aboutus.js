@@ -41,13 +41,15 @@ function render(index){
   showEl.appendChild(linkOne);
   let holdLink=document.createElement('img');
   linkOne.appendChild(holdLink);
-  holdLink.setAttribute('src','/images/linkedin.png');
+  holdLink.setAttribute('src','/images/github.png');
+  holdLink.setAttribute('class','link');
   let linkTwo =document.createElement('a');
   linkTwo.setAttribute('href',`${About.allPeople[index].githubAcc}`);
   showEl.appendChild(linkTwo);
   let holdLink2=document.createElement('img');
-  linkOne.appendChild(holdLink2);
-  holdLink.setAttribute('src','/images/github.png');
+  linkTwo.appendChild(holdLink2);
+  holdLink2.setAttribute('src','/images/linkedin.png');
+  holdLink2.setAttribute('class','link');
 }
 let count=0;
 // render(0);
@@ -77,8 +79,11 @@ function handleClicking(event) {
     }else if(event.target.id ==='aysheh'){
       showEl.innerHTML='';
       render(6);
+    } else{
+      showEl.innerHTML='';
     }
   }
-  else container.removeEventListener('click',handleClicking);
+  else {
+    container.removeEventListener('click',handleClicking);
+  }
 }
-
