@@ -1,6 +1,7 @@
 'use script';
 let container =document.getElementById('secone');
 let showEl = document.getElementById('sectwo');
+let showText=document.getElementById('secthree');
 // let ayyoubEl =document.getElementById('secone');
 // let shathaEl=document.getElementById('secone');
 // let roaaEl=document.getElementById('secone');
@@ -26,26 +27,28 @@ new About ('Abdullah Elian','text','http://www.linkedin.com/in/abdullah-elian','
 new About('Mohammad Hayagneh ','text','https://www.linkedin.com/in/mohammad-hayajneh-2ab099124/','https://github.com/mohammadhayajneh2014','/images/Mohamme.jpg');
 new About('Aysheh Abu mahfouz','text','https://www.linkedin.com/in/aysheh-mahfouz-28a48a20b/','https://github.com/Aysheh-Mahfouz','/images/Aysheh.jpg');
 
-function render(index){
+function renderImg(index){
   let imgEl= document.createElement('img');
   imgEl.setAttribute('src',`${About.allPeople[index].imgUrl}`);
   showEl.appendChild(imgEl);
+}
+function renderText(index){
   let nameEl=document.createElement('h5');
-  showEl.appendChild(nameEl);
+  showText.appendChild(nameEl);
   nameEl.textContent=`${About.allPeople[index].name}`;
   let aboutEl=document.createElement('p');
-  showEl.appendChild(aboutEl);
+  showText.appendChild(aboutEl);
   aboutEl.textContent=`${About.allPeople[index].breif}`;
   let linkOne =document.createElement('a');
   linkOne.setAttribute('href',`${About.allPeople[index].linkedinAcc}`);
-  showEl.appendChild(linkOne);
+  showText.appendChild(linkOne);
   let holdLink=document.createElement('img');
   linkOne.appendChild(holdLink);
   holdLink.setAttribute('src','/images/github.png');
   holdLink.setAttribute('class','link');
   let linkTwo =document.createElement('a');
   linkTwo.setAttribute('href',`${About.allPeople[index].githubAcc}`);
-  showEl.appendChild(linkTwo);
+  showText.appendChild(linkTwo);
   let holdLink2=document.createElement('img');
   linkTwo.appendChild(holdLink2);
   holdLink2.setAttribute('src','/images/linkedin.png');
@@ -60,27 +63,42 @@ function handleClicking(event) {
   if (count >= 1){
     if (event.target.id ==='ayyoub'){
       showEl.innerHTML='';
-      render(0);
+      showText.innerHTML='';
+      renderImg(0);
+      renderText(0);
     }else if (event.target.id ==='shatha') {
       showEl.innerHTML='';
-      render(1);
+      showText.innerHTML='';
+      renderImg(1);
+      renderText(1);
     } else if(event.target.id ==='roaa'){
       showEl.innerHTML='';
-      render(2);
+      showText.innerHTML='';
+      renderImg(2);
+      renderText(2);
     }else if(event.target.id ==='anas'){
       showEl.innerHTML='';
-      render(3);
+      showText.innerHTML='';
+      renderImg(3);
+      renderText(3);
     }else if(event.target.id ==='abdullah'){
       showEl.innerHTML='';
-      render(4);
+      showText.innerHTML='';
+      renderImg(4);
+      renderText(4);
     }else if(event.target.id ==='mohammed'){
       showEl.innerHTML='';
-      render(5);
+      showText.innerHTML='';
+      renderImg(5);
+      renderText(5);
     }else if(event.target.id ==='aysheh'){
       showEl.innerHTML='';
-      render(6);
+      showText.innerHTML='';
+      renderImg(6);
+      renderText(6);
     } else{
       showEl.innerHTML='';
+      showText.innerHTML='';
     }
   }
   else {

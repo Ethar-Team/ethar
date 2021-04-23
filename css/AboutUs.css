@@ -1,6 +1,4 @@
-main{
-box-sizing: border-box;
-}
+
 #secone img:not(.link){
     position: relative;
     top: 30%;
@@ -12,10 +10,17 @@ box-sizing: border-box;
     cursor: pointer;
 }
 #secone{
+    position: relative;
     background-color: #8E8F4F;
 }
 #secone img:hover{
     opacity: 0.5;
+}
+#sectwo{
+    position: relative;
+    float: left;
+    padding-left: 200px;
+    padding-top: 30px;
 }
 
 main h1{
@@ -23,11 +28,17 @@ main h1{
     font-family: 'Coda Caption', sans-serif;
     text-align: center;
 }
-#sectwo img:not(.link){
+#sectwo img{
     width: 400px;
     height: 400px;
+
 }
 .link{
     width: 20px;
     height: 20px;   
+}
+#secthree{
+    position: relative;
+    left:100px;
+    padding-top: 10px;
 }
