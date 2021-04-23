@@ -16,7 +16,6 @@ function About (name,breif,linkedin,github,imgUrl){
   this.imgUrl=imgUrl;
   About.allPeople.push(this);
 }
-
 About.allPeople=[];
 //adding the instances
 new About('Ayyoub Alkeyyam','text','http://www.linkedin.com/in/ayyoubk','https://github.com/ayyoubk','/images/Ayyoub.jpg');
@@ -40,9 +39,15 @@ function render(index){
   let linkOne =document.createElement('a');
   linkOne.setAttribute('href',`${About.allPeople[index].linkedinAcc}`);
   showEl.appendChild(linkOne);
+  let holdLink=document.createElement('img');
+  linkOne.appendChild(holdLink);
+  holdLink.setAttribute('src','/images/linkedin.png');
   let linkTwo =document.createElement('a');
   linkTwo.setAttribute('href',`${About.allPeople[index].githubAcc}`);
   showEl.appendChild(linkTwo);
+  let holdLink2=document.createElement('img');
+  linkOne.appendChild(holdLink2);
+  holdLink.setAttribute('src','/images/github.png');
 }
 let count=0;
 // render(0);
