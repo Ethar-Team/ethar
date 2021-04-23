@@ -131,7 +131,15 @@ function renderls(){
   for(let i=0;i<Donation.allItems.length;i++){
     let Di=document.createElement('div');
     Di.setAttribute('class','Items');
+
     Di.setAttribute('id',`Item${counter}`);
+    if(counter%2===0){
+      Di.setAttribute('data-aos','fade-left');
+
+    }else{
+      Di.setAttribute('data-aos','fade-right');
+
+    }
 
 
     secTwo.appendChild(Di);
@@ -168,7 +176,7 @@ function renderls(){
     counter++;
     but.addEventListener('click',handlebutton);
 
-    
+
 
 
   }
