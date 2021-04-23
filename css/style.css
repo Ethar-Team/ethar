@@ -1,20 +1,8 @@
-header
-{
-    position: relative;
+body{
+    background-color: aliceblue;
+    margin: 0px
 }
-
-.logoAndText
-{
-    display: inline-block;
-
-}
-
-.logoText1
-{
-    position: absolute;
-    display: inline-block;
-    font-family: cursive;
-    font-size: larger;
-    margin-top: -0.2em;
-    margin-left: 0.1em;
+main img{
+    padding: 30px;
+    padding-left: 230px;
 }
