@@ -160,7 +160,8 @@ function renderls(){
       but.textContent='Book It!';
     }else{
       let unavalible=document.createElement('img');
-      unavalible.setAttribute('src','https://thumbs.dreamstime.com/t/unavailable-rubber-stamp-vector-red-isolated-151087214.jpg');
+      unavalible.setAttribute('src','/images/download.png');
+      unavalible.setAttribute('class','absImg');
       let div=document.getElementById(`Item${i}`);
       div.appendChild(unavalible);
     }
@@ -196,7 +197,9 @@ function handlebutton(event){
     let myobj = document.getElementById(y);
     myobj.remove();
     let unavalible=document.createElement('img');
-    unavalible.setAttribute('src','https://thumbs.dreamstime.com/t/unavailable-rubber-stamp-vector-red-isolated-151087214.jpg');
+    unavalible.setAttribute('src','/images/download.png');
+    unavalible.setAttribute('class','absImg');
+
     let div=document.getElementById(`Item${x}`);
     div.appendChild(unavalible);
 

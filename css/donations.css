@@ -18,6 +18,15 @@
     border: 2px solid rgb(106, 106, 158);
     text-align: center;
     border-radius: 10%;
+    position: relative;
+}
+
+.absImg{
+    position: absolute;
+    top: 12%;
+    left: 0;
+    transform: rotate(-30deg);
+    opacity: 0.5;
 }
 
 .Items h4,p{
