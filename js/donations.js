@@ -1,8 +1,9 @@
 'use strict';
 
 
-let x;
-
+let divIdNumber;
+let divIdName;
+let Di;
 
 
 
@@ -21,11 +22,6 @@ function Donation(CategoryType, source, contInfo,desc){
 
 Donation.allItems=[];
 
-
-// let x= new Donation('food','hjk','dssd','dfj');
-// console.log(x);
-
-
 function saveToLs(){
 
   let arrStr = JSON.stringify( Donation.allItems);
@@ -36,65 +32,47 @@ function saveToLs(){
 function gettingOrderFromLs(){
 
   let data = localStorage.getItem('Itemsaved');
-
   let order = JSON.parse(data);
-
   if(order !== null){
     Donation.allItems = order;
   }
-  console.log(Donation.allItems);
 
   renderls();
 
 }
 
-
-
-
 let formItem= document.getElementById('form1');
 let secTwo= document.getElementById('display-sec');
-
+let secForm2=document.getElementById('sec-form2');
 formItem.addEventListener('submit', handleSubmit);
 let img;
 let catg;
 let contus;
 let description;
 
-
-
-
 function handleSubmit(event){
   event.preventDefault();
-  //console.log(event);
   catg = event.target.category.value;
-  // //console.log(cat);
   img = event.target.imgurl.value;
   contus = event.target.contus.value;
   description = event.target.description.value;
 
   new Donation(catg,img,contus,description);
 
-  console.log(Donation.allItems);
   render();
   saveToLs();
 
 
 }
 
-
-
-
-
-//let x= new Donation('a','a','a','a');
-//x.getCheck();
 let but=document.createElement('button');
 
 let counter=0;
 function render(){
 
-  let Di=document.createElement('div');
-  Di.setAttribute('class','Items');
-  Di.setAttribute('id',`Item${counter}`);
+  Di=document.createElement('div');
+  Di.setAttribute('class','items');
+  Di.setAttribute('id',`item${counter}`);
 
   secTwo.appendChild(Di);
 
@@ -116,7 +94,7 @@ function render(){
   contact.textContent=contus;
 
   but=document.createElement('button');
-  but.setAttribute('id',`A${counter}`);
+  but.setAttribute('id',`btn${counter}`);
   counter++;
   Di.appendChild(but);
   but.textContent='Book It!';
@@ -133,9 +111,9 @@ function renderls(){
   let but=document.createElement('button');
   for(let i=0;i<Donation.allItems.length;i++){
     let Di=document.createElement('div');
-    Di.setAttribute('class','Items');
+    Di.setAttribute('class','items');
 
-    Di.setAttribute('id',`Item${counter}`);
+    Di.setAttribute('id',`item${counter}`);
     if(counter%2===0){
       Di.setAttribute('data-aos','fade-down-left');
 
@@ -166,14 +144,14 @@ function renderls(){
 
     if(Donation.allItems[i].value===0){
       but=document.createElement('button');
-      but.setAttribute('id',`A${counter}`);
+      but.setAttribute('id',`btn${counter}`);
       Di.appendChild(but);
       but.textContent='Book It!';
     }else{
       let unavalible=document.createElement('img');
       unavalible.setAttribute('src','/images/download.png');
       unavalible.setAttribute('class','absImg');
-      let div=document.getElementById(`Item${i}`);
+      let div=document.getElementById(`item${i}`);
       div.appendChild(unavalible);
     }
     counter++;
@@ -185,66 +163,130 @@ function renderls(){
   }
 
 }
+let formForItem=document.createElement('form');
+let submitBook;
+let fieldset;
+function itemForm(){
+  formForItem.remove();
+  formForItem=document.createElement('form');
+  formForItem.setAttribute('id','form2');
+  secForm2.appendChild(formForItem);
+  fieldset=document.createElement('fieldset');
+  formForItem.appendChild(fieldset);
 
-//but.addEventListener('click',handlebutton);
+  let legend=document.createElement('legend');
+  fieldset.appendChild(legend);
+  legend.textContent='Enter Your Info :';
 
+  let nameLabel=document.createElement('label');
+  fieldset.appendChild(nameLabel);
+  nameLabel.textContent='Name';
+  nameLabel.setAttribute('for','customername');
+  let input1=document.createElement('input');
+  input1.setAttribute('type','text');
+  input1.setAttribute('id','customername');
+  input1.setAttribute('required','text');
+  fieldset.appendChild(input1);
+
+  let nameLabe2=document.createElement('label');
+  fieldset.appendChild(nameLabe2);
+  nameLabe2.textContent='Contact';
+  nameLabe2.setAttribute('for','customercontact');
+  let input2=document.createElement('input');
+  fieldset.appendChild(input2);
+  input2.setAttribute('type','text');
+  input2.setAttribute('id','customercontact');
+  input2.setAttribute('required','text');
+  submitBook=document.createElement('button');
+  submitBook.setAttribute('id','submitBook');
+  submitBook.setAttribute('type','submit');
+  submitBook.textContent='Submit';
+  fieldset.appendChild(submitBook);
+  let cancelBtn=document.createElement('button');
+  cancelBtn.setAttribute('onClick','cancelForm()');
+  cancelBtn.textContent='Cancel';
+  fieldset.appendChild(cancelBtn);
+  formForItem.addEventListener('submit',handleBook);
+
+}
+
+
+function handleBook(event){
+  event.preventDefault();
+  unPic(divIdNumber);
+  let userName=event.target.customername.value;
+  let contactInfo=event.target.customercontact.value;
+  new Custinfo(userName,contactInfo,divIdNumber);
+  saveToLsCust();
+  formForItem.remove();
+}
 function handlebutton(event){
   event.preventDefault();
+  divIdNumber= event.target.id;
+  divIdName=divIdNumber;
+  divIdNumber=getNumberFromString(divIdNumber);
 
-  x= event.target.id;
-
-
-  let y=x;
-  x=getNumberFromString(x);
-  console.log(x);
-
-
-
-  //console.log(x);
-  if(Donation.allItems[x].value===0){
-    alert('you booked it');
-    // console.log(Donation.allItems[x].value);
-    Donation.allItems[x].value++;
-    let myobj = document.getElementById(y);
+  if(Donation.allItems[divIdNumber].value===0){
+    itemForm();
+    Donation.allItems[divIdNumber].value++;
+    let myobj = document.getElementById(divIdName);
     myobj.remove();
-    let unavalible=document.createElement('img');
-    unavalible.setAttribute('src','/images/download.png');
-    unavalible.setAttribute('class','absImg');
-
-    let div=document.getElementById(`Item${x}`);
-    div.appendChild(unavalible);
-
     saveToLs();
-
-
-    //console.log(Donation.allItems[x].value);
-
   }
-  else{
-    alert('this was taken');
-  }
-  //console.log(Donation.allItems[x].value);
-
-
-
-
 }
-
 
 gettingOrderFromLs();
-
-function getNumberFromString(x)
-{
-  let text=x;
+// Helper Function to extract the number from any string
+function getNumberFromString(divIdNumber){
+  let text=divIdNumber;
   text=text.replace(/\D/g,'');
-  //console.log(text);
   return text;
+}
 
+function unPic(indexOf){
+  let unavalible=document.createElement('img');
+  unavalible.setAttribute('src','/images/download.png');
+  unavalible.setAttribute('class','absImg');
+  let div=document.getElementById(`item${indexOf}`);
+  div.appendChild(unavalible);
+}
+
+function cancelForm(){
+  formForItem.remove();
+  repeatBookIt(divIdNumber);
+}
+gettingOrderFromLs1();
+
+function repeatBookIt(divIdNumber) {
+  but=document.createElement('button');
+  but.setAttribute('id',`btn${divIdNumber}`);
+  let theDiv=document.getElementById(`item${divIdNumber}`);
+  theDiv.appendChild(but);
+  but.textContent='Book It!';
+  but.addEventListener('click',handlebutton);
+  Donation.allItems[divIdNumber].value--;
+  saveToLs();
 }
 
 
+function Custinfo(name,contact,idOfItem){
+  this.name=name;
+  this.contact=contact;
+  this.idOfItem=idOfItem;
+  Custinfo.allItems.push(this);
+}
+Custinfo.allItems=[];
 
+function saveToLsCust(){
 
+  let arrStr = JSON.stringify( Custinfo.allItems);
+  localStorage.setItem('CustInfo', arrStr);
+}
 
-
-
+function gettingOrderFromLs1(){
+  let data = localStorage.getItem('CustInfo');
+  let order = JSON.parse(data);
+  if(order !== null){
+    Custinfo.allItems = order;
+  }
+}
