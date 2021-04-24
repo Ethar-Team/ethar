@@ -154,8 +154,8 @@ container.addEventListener('submit',formBox);
 
 function formBox (event){
 
-    event.preventDefault();
- 
+  event.preventDefault();
+
 
   let newName=event.target.customername.value;
   let newContact=event.target.customercontact.value;
@@ -164,7 +164,7 @@ function formBox (event){
   let Newhelp= new AskForHelp(newName,newContact,newTime);
   saveLs ();
   form.remove();
-  
+
   massage=document.createElement('p');
   formSection.appendChild(massage);
   massage.textContent=' your request in progress ';
@@ -182,6 +182,15 @@ function saveLs (){
   localStorage.setItem('volunteer',save);
 }
 function getInfo(){
-    
+
+  let data=localStorage.getItem('volunteer');
+  let arryObject=JSON.parse( data);
+
+  if(arryObject !== null){
+
+    array=arryObject;
+
+  }
 }
 
+getInfo();
