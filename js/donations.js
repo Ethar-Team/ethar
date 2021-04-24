@@ -4,6 +4,10 @@
 let x;
 
 
+
+
+
+
 function Donation(CategoryType, source, contInfo,desc){
   this.type=CategoryType;
   this.source=source;
@@ -32,10 +36,9 @@ function saveToLs(){
 function gettingOrderFromLs(){
 
   let data = localStorage.getItem('Itemsaved');
-  //console.log(data);
+
   let order = JSON.parse(data);
-  //console.log(order);
-  //order[0].value++;
+
   if(order !== null){
     Donation.allItems = order;
   }
