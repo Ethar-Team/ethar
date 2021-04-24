@@ -9,6 +9,7 @@ function AskForHelp (names,countatNumber,description){
     this.countatNumber=countatNumber;
     this.description=description;
     array.push(this)
+    saveLs ()
 }
 let anas = new AskForHelp('anas','11','12')
 
@@ -151,6 +152,13 @@ function formBox (event){
 
         let Newhelp= new AskForHelp(newName,newContact,newTime)
         console.log(array)
+    }
+
+
+    function saveLs (){
+
+        let save=JSON.stringify(array)
+        localStorage.setItem("Volonteer",save)
     }
 
 
