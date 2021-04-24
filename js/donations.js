@@ -134,10 +134,10 @@ function renderls(){
 
     Di.setAttribute('id',`Item${counter}`);
     if(counter%2===0){
-      Di.setAttribute('data-aos','fade-left');
+      Di.setAttribute('data-aos','fade-down-left');
 
     }else{
-      Di.setAttribute('data-aos','fade-right');
+      Di.setAttribute('data-aos','fade-down-right');
 
     }
 
