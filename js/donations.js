@@ -232,9 +232,8 @@ function handlebutton(event){
 }
 
 gettingOrderFromLs();
-
-function getNumberFromString(divIdNumber)
-{
+// Helper Function to extract the number from any string
+function getNumberFromString(divIdNumber){
   let text=divIdNumber;
   text=text.replace(/\D/g,'');
   return text;
