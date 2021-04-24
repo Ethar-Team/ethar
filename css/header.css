@@ -1,24 +1,27 @@
-html
-{
-    width: 920px;
+
+header{
+    background-color: #114E60;
 }
-header
-{
-    position: relative;
+header img{
+    margin-left: 5px;
 }
-
-.logoAndText
-{
-    display: inline-block;
+#headlist{
+ position: relative;
+display:block;
+right: 50px ;
+float:right;
+margin-top: 20px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
+#headlist a{
+    text-decoration: none;
+    color:#95b0b6;
+    padding: 20px;
 
-
-.logoText
-{
-    
-    display: inline-block;
-    font-family:  cursive;
-    font-size:larger;
-    
+}
+  a:hover{
+    background-color:white;
+    font-size: 25px;
+    /* transform: scale(1.5); */
 }

@@ -1,0 +1,43 @@
+
+#secone img:not(.link){
+    position: relative;
+    top: 30%;
+    left: 60px;
+    width: 100px;
+    height: 100px;
+    padding: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#secone{
+    position: relative;
+
+}
+#secone img:hover{
+    opacity: 0.5;
+}
+#sectwo{
+    position: relative;
+    float: left;
+    padding-left: 200px;
+    padding-top: 30px;
+}
+
+main h1{
+    font-family: 'Coda Caption', sans-serif;
+    text-align: center;
+}
+#sectwo img{
+    width: 400px;
+    height: 400px;
+
+}
+.link{
+    width: 20px;
+    height: 20px;   
+}
+#secthree{
+    position: relative;
+    left:100px;
+    padding-top: 10px;
+}
