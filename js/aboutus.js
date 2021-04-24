@@ -105,3 +105,6 @@ function handleClicking(event) {
     container.removeEventListener('click',handleClicking);
   }
 }
+
+let x =localStorage.getItem('CustInfo');
+console.log(JSON.parse(x));
