@@ -1,7 +1,7 @@
 'use strict';
 
 
-let x;
+let divIdNumber;
 
 
 function Donation(CategoryType, source, contInfo,desc){
@@ -17,9 +17,6 @@ function Donation(CategoryType, source, contInfo,desc){
 
 Donation.allItems=[];
 
-
-// let x= new Donation('food','hjk','dssd','dfj');
-// console.log(x);
 
 
 function saveToLs(){
@@ -50,7 +47,7 @@ function gettingOrderFromLs(){
 
 let formItem= document.getElementById('form1');
 let secTwo= document.getElementById('display-sec');
-
+let secForm2=document.getElementById('sec-form2');
 formItem.addEventListener('submit', handleSubmit);
 let img;
 let catg;
@@ -182,37 +179,78 @@ function renderls(){
   }
 
 }
-
+let formForItem=document.createElement('form');
+let submitBook;
+// let formForItem=document.getElementById('foorm');
 //but.addEventListener('click',handlebutton);
+function itemForm(){
+  formForItem.remove();
+  formForItem=document.createElement('form');
+  formForItem.setAttribute('id','form2');
+  secForm2.appendChild(formForItem);
+  let fieldset=document.createElement('fieldset');
+  formForItem.appendChild(fieldset);
+
+  let legend=document.createElement('legend');
+  fieldset.appendChild(legend);
+  legend.textContent='Enter Your Info :';
+
+  let nameLabel=document.createElement('label');
+  fieldset.appendChild(nameLabel);
+  nameLabel.textContent='Name';
+  nameLabel.setAttribute('for','customername');
+  let input1=document.createElement('input');
+  input1.setAttribute('type','text');
+  input1.setAttribute('id','customername');
+  input1.setAttribute('required','text');
+  fieldset.appendChild(input1);
+
+  let nameLabe2=document.createElement('label');
+  fieldset.appendChild(nameLabe2);
+  nameLabe2.textContent='Contact';
+  nameLabe2.setAttribute('for','customercontact');
+  let input2=document.createElement('input');
+  fieldset.appendChild(input2);
+  input2.setAttribute('type','text');
+  input2.setAttribute('id','customercontact');
+  input2.setAttribute('required','text');
+  submitBook=document.createElement('button');
+  submitBook.setAttribute('id','submitBook');
+  submitBook.setAttribute('type','submit');
+  submitBook.textContent='Submit';
+  fieldset.appendChild(submitBook);
+  formForItem.addEventListener('submit',handleBook);
+
+}
+function handleBook(event){
+  event.preventDefault();
+  unPic(divIdNumber);
+  console.log(event);
+  let userName=event.target.customername.value;
+  let contactInfo=event.target.customercontact.value;
+  // saveToLs();
+  // submitBook.removeEventListener('submit',handleBook);
+  formForItem.remove();
+}
 
 function handlebutton(event){
   event.preventDefault();
 
-  x= event.target.id;
+  divIdNumber= event.target.id;
 
 
-  let y=x;
-  x=getNumberFromString(x);
-  console.log(x);
+  let divIdName=divIdNumber;
+  divIdNumber=getNumberFromString(divIdNumber);
+  console.log(divIdNumber);
 
 
-
-  //console.log(x);
-  if(Donation.allItems[x].value===0){
-    alert('you booked it');
+  if(Donation.allItems[divIdNumber].value===0){
+    itemForm();
     // console.log(Donation.allItems[x].value);
-    Donation.allItems[x].value++;
-    let myobj = document.getElementById(y);
+    Donation.allItems[divIdNumber].value++;
+    let myobj = document.getElementById(divIdName);
     myobj.remove();
-    let unavalible=document.createElement('img');
-    unavalible.setAttribute('src','/images/download.png');
-    unavalible.setAttribute('class','absImg');
-
-    let div=document.getElementById(`Item${x}`);
-    div.appendChild(unavalible);
-
     saveToLs();
-
 
     //console.log(Donation.allItems[x].value);
 
@@ -230,9 +268,9 @@ function handlebutton(event){
 
 gettingOrderFromLs();
 
-function getNumberFromString(x)
+function getNumberFromString(divIdNumber)
 {
-  let text=x;
+  let text=divIdNumber;
   text=text.replace(/\D/g,'');
   //console.log(text);
   return text;
@@ -241,7 +279,14 @@ function getNumberFromString(x)
 
 
 
+function unPic(indexOf){
+  let unavalible=document.createElement('img');
+  unavalible.setAttribute('src','/images/download.png');
+  unavalible.setAttribute('class','absImg');
 
+  let div=document.getElementById(`Item${indexOf}`);
+  div.appendChild(unavalible);
+}
 
 
 
