@@ -17,8 +17,6 @@ function Donation(CategoryType, source, contInfo,desc){
 
 Donation.allItems=[];
 
-
-
 function saveToLs(){
 
   let arrStr = JSON.stringify( Donation.allItems);
@@ -42,9 +40,6 @@ function gettingOrderFromLs(){
 
 }
 
-
-
-
 let formItem= document.getElementById('form1');
 let secTwo= document.getElementById('display-sec');
 let secForm2=document.getElementById('sec-form2');
@@ -53,9 +48,6 @@ let img;
 let catg;
 let contus;
 let description;
-
-
-
 
 function handleSubmit(event){
   event.preventDefault();
@@ -75,12 +67,6 @@ function handleSubmit(event){
 
 }
 
-
-
-
-
-//let x= new Donation('a','a','a','a');
-//x.getCheck();
 let but=document.createElement('button');
 
 let counter=0;
@@ -181,8 +167,7 @@ function renderls(){
 }
 let formForItem=document.createElement('form');
 let submitBook;
-// let formForItem=document.getElementById('foorm');
-//but.addEventListener('click',handlebutton);
+
 function itemForm(){
   formForItem.remove();
   formForItem=document.createElement('form');
@@ -222,49 +207,56 @@ function itemForm(){
   formForItem.addEventListener('submit',handleBook);
 
 }
+
+function Custinfo(name,contact,idOfItem){
+  this.name=name;
+  this.contact=contact;
+  this.idOfItem=idOfItem;
+  Custinfo.allItems.push(this);
+}
+Custinfo.allItems=[];
+
+function saveToLsCust(){
+
+  let arrStr = JSON.stringify( Custinfo.allItems);
+  localStorage.setItem('CustInfo', arrStr);
+}
+
+function gettingOrderFromLs1(){
+  let data = localStorage.getItem('CustInfo');
+  let order = JSON.parse(data);
+  if(order !== null){
+    Custinfo.allItems = order;
+  }
+  console.log(Custinfo.allItems);
+}
+
 function handleBook(event){
   event.preventDefault();
   unPic(divIdNumber);
   console.log(event);
+  console.log(divIdNumber);
   let userName=event.target.customername.value;
   let contactInfo=event.target.customercontact.value;
-  // saveToLs();
-  // submitBook.removeEventListener('submit',handleBook);
+  new Custinfo(userName,contactInfo,divIdNumber);
+  saveToLsCust();
   formForItem.remove();
 }
 
 function handlebutton(event){
   event.preventDefault();
-
   divIdNumber= event.target.id;
-
-
   let divIdName=divIdNumber;
   divIdNumber=getNumberFromString(divIdNumber);
-  console.log(divIdNumber);
-
 
   if(Donation.allItems[divIdNumber].value===0){
     itemForm();
-    // console.log(Donation.allItems[x].value);
     Donation.allItems[divIdNumber].value++;
     let myobj = document.getElementById(divIdName);
     myobj.remove();
     saveToLs();
-
-    //console.log(Donation.allItems[x].value);
-
   }
-  else{
-    alert('this was taken');
-  }
-  //console.log(Donation.allItems[x].value);
-
-
-
-
 }
-
 
 gettingOrderFromLs();
 
@@ -274,19 +266,14 @@ function getNumberFromString(divIdNumber)
   text=text.replace(/\D/g,'');
   //console.log(text);
   return text;
-
 }
-
-
 
 function unPic(indexOf){
   let unavalible=document.createElement('img');
   unavalible.setAttribute('src','/images/download.png');
   unavalible.setAttribute('class','absImg');
-
   let div=document.getElementById(`Item${indexOf}`);
   div.appendChild(unavalible);
 }
 
-
-
+gettingOrderFromLs1();
