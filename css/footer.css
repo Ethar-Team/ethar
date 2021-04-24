@@ -1,0 +1,12 @@
+footer{
+    position: relative;
+    background-color: #114E60;
+    text-align: center;
+    width: 100%;
+    height: 70px;
+}
+footer h5{
+    padding-top: 25px;
+    font-size:large;
+    color: #95b0b6;
+}
