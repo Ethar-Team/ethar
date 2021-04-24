@@ -26,12 +26,12 @@ function Servies (name,paragraph){
 
 }
 
-let building= new Servies('building','Para1');
-let teaching= new Servies('teaching','para2');
-let carpentry= new Servies('carpenting','para3');
-let plumbing=new Servies('plumbing','para4');
-let painting=new Servies('painting','para5');
-let electric=new Servies('electric','para6');
+let building= new Servies('building','designing or maintaining air conditioning, elevators and other mechanical systems,distributing electricity and water supply,providing lighting and heating.');
+let teaching= new Servies('teaching','We provide specialist teaching services to support children and young people with a variety of special educational needs and disabilities. We provide our specialist teaching services across all education settings, secondary, primary, mainstream, specialist and early years.');
+let carpentry= new Servies('carpenting','Measuring, marking up, cutting, shaping, fitting and finishing timber,Using a range of hand and power tools,Installing floor joists, floorboards, roof trusses and wall partitions,Fitting interiors such as staircases, doors, skirting boards, cupboards and kitchens,Putting up frames for bridges, roads, dams and buildings,Drawing and working with technical drawings,Working in residential or commercial buildings,Restoring buildings,Working in a workshop, a client’s business or home, or on a construction site,Carrying out jobs in dusty conditions or working outdoors in all weather and at height.');
+let plumbing=new Servies('plumbing','Install pipes and plumbing fixtures. Visually inspect equipment and operate test equipment such as pressure and vacuum gauges to determine the cause and location of trouble. Clear obstructions from sink drains and toilets, Troubleshoot problems and decide how to fix them. Repair pipes and plumbing fixtures,Do installations and repairs.Present recommendations to people.');
+let painting=new Servies('painting','paint surface for homes,Insulation of roofs and walls of houses,Cleaning and washing surfaces and walls.repairing wall pits,removing old paint before starting to paint.');
+let electric=new Servies('electric','Generation and Power Supply,Transmission and Distribution,Lighting Services,Generation and Power Supply Services,Transmission and Distribution ,upgrades to existing wiring.');
 
 
 
