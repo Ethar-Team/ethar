@@ -1,16 +1,17 @@
 'use sttict '
 
 let waitinglist=document.getElementById("waitingList")
+
 let array=[]
-// function AskForHelp (names,countatNumber,helpTime){
+function AskForHelp (names,countatNumber,description){
 
-//     this.names=names;
-//     this.countatNumber=countatNumber;
-//     this.helpTime=helpTime;
-//     array.push(this)
-// }
+    this.names=names;
+    this.countatNumber=countatNumber;
+    this.description=description;
+    array.push(this)
+}
+let anas = new AskForHelp('anas','11','12')
 
-// let anas = new AskForHelp('anas','11','12')
 
 
 let arrayOfServices=[];
@@ -85,6 +86,7 @@ function formRander(){
 
     
     let form=document.createElement("form")
+    form.setAttribute("id","askForm")
     formSection.appendChild(form)
     let fieldset=document.createElement("fieldset")
     form.appendChild(fieldset)
@@ -133,6 +135,25 @@ function formRander(){
 };
 
 
+
+
+
+     container.addEventListener("submit",formBox)
+
+function formBox (event){
+
+        event.preventDefault()
+
+        
+        let newName=event.target.customername.value
+        let newContact=event.target.customercontact.value
+        let newTime=event.target.description.value
+
+        let Newhelp= new AskForHelp(newName,newContact,newTime)
+        console.log(Newhelp)
+    }
+
+
 // function randerSection (){
     
     
@@ -159,9 +180,9 @@ function formRander(){
 //         console.log(event)
 //         event.preventDefault()
 
-//         let newName=event.target.customername.value
-//         let newContact=event.target.customercontact.value
-//         let newTime=event.target.time.value
+        // let newName=event.target.customername.value
+        // let newContact=event.target.customercontact.value
+        // let newTime=event.target.time.value
 
 //         let Newhelp= new AskForHelp(newName,newContact,newTime)
 
