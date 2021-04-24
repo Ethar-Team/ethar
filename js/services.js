@@ -149,7 +149,7 @@ function formRander(){
 /////    Submit Form Function
 
 
-     container.addEventListener("submit",formBox)
+     container.addEventListener("submit",formBox);
 
     function formBox (event){
 
@@ -160,8 +160,8 @@ function formRander(){
         let newContact=event.target.customercontact.value
         let newTime=event.target.description.value
 
-        let Newhelp= new AskForHelp(newName,newContact,newTime)
-
+        let Newhelp= new AskForHelp(newName,newContact,newTime);
+        container.removeEventListener("submit",formBox);
     }
 
 
