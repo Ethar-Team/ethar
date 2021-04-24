@@ -226,10 +226,10 @@ function renderOfJoin(){
   let lab13 =document.createElement('label');
   lab13.setAttribute('for','inp13');
   field.appendChild(lab13);
-  lab13.textContent='Contact Numper';
+  lab13.textContent='Contact Number';
   let inp13 =document.createElement('input');
   inp13.setAttribute('id','inp13');
-  inp13.setAttribute('type','text');
+  inp13.setAttribute('type','number');
   inp13.setAttribute('required','text');
   field.appendChild(inp13);
 
