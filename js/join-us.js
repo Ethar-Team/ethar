@@ -65,13 +65,15 @@ function renderOfJoin(){
   but3.setAttribute('id','EXit');
   but3.textContent='close';
   field.appendChild(but3);
-  formJoin.addEventListener('click',removejoin);
+  but3.addEventListener('click',removejoin);
   //formJoin.removeEventListener('click',removejoin);
 
 }
 
 function removejoin(event) {
-  formJoin.remove;
+  formJoin.remove();
+  but.addEventListener('click',callrenderOfJoin);
+
   
 }
 
