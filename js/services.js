@@ -110,10 +110,13 @@ function formRander(){
   fieldset.appendChild(nameLabel);
   nameLabel.textContent='Name';
   nameLabel.setAttribute('for','customername');
+
   let input1=document.createElement('input');
+  input1.required
   fieldset.appendChild(input1);
   input1.setAttribute('type','text');
   input1.setAttribute('id','customername');
+  input1.setAttribute('required','text')
   let br1=document.createElement('br');
 
 
@@ -125,6 +128,8 @@ function formRander(){
   fieldset.appendChild(input2);
   input2.setAttribute('type','text');
   input2.setAttribute('id','customercontact');
+  input2.setAttribute('required','text')
+
   let br2=document.createElement('br');
 
 
@@ -136,6 +141,8 @@ function formRander(){
   fieldset.appendChild(input3);
   // input3.setAttribute("type","text")
   input3.setAttribute('id','description');
+  input3.setAttribute('required','text')
+
   let br3=document.createElement('br');
 
   let submit=document.createElement('input');
