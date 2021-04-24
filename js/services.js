@@ -1,6 +1,9 @@
 'use sttict '
 
-let waitinglist=document.getElementById("waitingList")
+
+/////     Function Construction 
+
+
 
 let array=[]
 function AskForHelp (names,countatNumber,description){
@@ -11,7 +14,7 @@ function AskForHelp (names,countatNumber,description){
     array.push(this)
     saveLs ()
 }
-let anas = new AskForHelp('anas','11','12')
+
 
 
 
@@ -29,6 +32,12 @@ let carpentry= new Servies("carpenting","para3")
 let plumbing=new Servies("plumbing","para4")
 let painting=new Servies("painting","para5")
 let electric=new Servies("electric","para6")
+
+
+
+
+
+/////    Rendering Functions 
 
 
 const cards=document.getElementById("right");
@@ -133,15 +142,16 @@ function formRander(){
     submit.setAttribute("type","submit")
     submit.setAttribute("value", "Submit")
 
-};
+}
 
 
 
+/////    Submit Form Function
 
 
      container.addEventListener("submit",formBox)
 
-function formBox (event){
+    function formBox (event){
 
         event.preventDefault()
 
@@ -151,47 +161,17 @@ function formBox (event){
         let newTime=event.target.description.value
 
         let Newhelp= new AskForHelp(newName,newContact,newTime)
-        console.log(array)
+
     }
 
+
+/////    Saving To Localstorage  
+
+ 
 
     function saveLs (){
 
         let save=JSON.stringify(array)
-        localStorage.setItem("Volonteer",save)
+        localStorage.setItem("volunteer",save)
     }
 
-
-// function randerSection (){
-    
-    
-// }
-
-// let list=document.createElement("ul")
-// waitinglist.appendChild(list)
-// randerlist ()
-
-// function randerlist (){
-    
-//     let li=document.createElement('li')
-//     list.appendChild(li)
-//     // li.textContent=('THe Name : ' + helpingArray.names[0] + ' The Contact Number ' )
-// }
-// console.log(array[0].names)
-
-
-// const helpingForm=document.getElementById("hepingForm")
-// helpingForm.addEventListener('submit', helpTask)
-
-//     function helpTask (event){
-
-//         console.log(event)
-//         event.preventDefault()
-
-        // let newName=event.target.customername.value
-        // let newContact=event.target.customercontact.value
-        // let newTime=event.target.time.value
-
-//         let Newhelp= new AskForHelp(newName,newContact,newTime)
-
-// }
