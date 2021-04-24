@@ -1,6 +1,8 @@
 'use strict';
 
 
+let x;
+
 
 function Donation(CategoryType, source, contInfo,desc){
   this.type=CategoryType;
@@ -45,6 +47,7 @@ function gettingOrderFromLs(){
 
 
 
+
 let formItem= document.getElementById('form1');
 let secTwo= document.getElementById('display-sec');
 
@@ -71,7 +74,7 @@ function handleSubmit(event){
   console.log(Donation.allItems);
   render();
   saveToLs();
-  
+
 
 }
 
@@ -88,6 +91,8 @@ function render(){
 
   let Di=document.createElement('div');
   Di.setAttribute('class','Items');
+  Di.setAttribute('id',`Item${counter}`);
+
   secTwo.appendChild(Di);
 
   let img1=document.createElement('img');
@@ -127,6 +132,15 @@ function renderls(){
     let Di=document.createElement('div');
     Di.setAttribute('class','Items');
 
+    Di.setAttribute('id',`Item${counter}`);
+    if(counter%2===0){
+      Di.setAttribute('data-aos','fade-down-left');
+
+    }else{
+      Di.setAttribute('data-aos','fade-down-right');
+
+    }
+
 
     secTwo.appendChild(Di);
 
@@ -147,12 +161,22 @@ function renderls(){
     Di.appendChild(contact);
     contact.textContent=`${Donation.allItems[i].contInfo}`;
 
-    but=document.createElement('button');
-    but.setAttribute('id',`A${counter}`);
+    if(Donation.allItems[i].value===0){
+      but=document.createElement('button');
+      but.setAttribute('id',`A${counter}`);
+      Di.appendChild(but);
+      but.textContent='Book It!';
+    }else{
+      let unavalible=document.createElement('img');
+      unavalible.setAttribute('src','/images/download.png');
+      unavalible.setAttribute('class','absImg');
+      let div=document.getElementById(`Item${i}`);
+      div.appendChild(unavalible);
+    }
     counter++;
-    Di.appendChild(but);
-    but.textContent='Book It!';
     but.addEventListener('click',handlebutton);
+
+
 
 
   }
@@ -164,16 +188,32 @@ function renderls(){
 function handlebutton(event){
   event.preventDefault();
 
-  let x= event.target.id;
+  x= event.target.id;
+
+
+  let y=x;
   x=getNumberFromString(x);
+  console.log(x);
 
 
-  
+
   //console.log(x);
   if(Donation.allItems[x].value===0){
     alert('you booked it');
     // console.log(Donation.allItems[x].value);
     Donation.allItems[x].value++;
+    let myobj = document.getElementById(y);
+    myobj.remove();
+    let unavalible=document.createElement('img');
+    unavalible.setAttribute('src','/images/download.png');
+    unavalible.setAttribute('class','absImg');
+
+    let div=document.getElementById(`Item${x}`);
+    div.appendChild(unavalible);
+
+    saveToLs();
+
+
     //console.log(Donation.allItems[x].value);
 
   }
@@ -194,7 +234,7 @@ function getNumberFromString(x)
 {
   let text=x;
   text=text.replace(/\D/g,'');
-  console.log(text);
+  //console.log(text);
   return text;
 
 }
