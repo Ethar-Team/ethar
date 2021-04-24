@@ -90,12 +90,13 @@ function renderform (event){
 
 
 }
+let form;
 
 function formRander(){
 
 
 
-  let form=document.createElement('form');
+  form=document.createElement('form');
   form.setAttribute('id','askForm');
   formSection.appendChild(form);
   let fieldset=document.createElement('fieldset');
@@ -153,15 +154,21 @@ container.addEventListener('submit',formBox);
 
 function formBox (event){
 
-  event.preventDefault();
-
+    event.preventDefault();
+ 
 
   let newName=event.target.customername.value;
   let newContact=event.target.customercontact.value;
   let newTime=event.target.description.value;
 
   let Newhelp= new AskForHelp(newName,newContact,newTime);
-  container.removeEventListener('submit',formBox);
+  saveLs ();
+  form.remove();
+  
+  massage=document.createElement('p');
+  formSection.appendChild(massage);
+  massage.textContent=' your request in progress ';
+
 }
 
 
@@ -173,5 +180,8 @@ function saveLs (){
 
   let save=JSON.stringify(array);
   localStorage.setItem('volunteer',save);
+}
+function getInfo(){
+    
 }
 
