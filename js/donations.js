@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 function Donation(CategoryType, source, contInfo,desc){
   this.type=CategoryType;
   this.source=source;
