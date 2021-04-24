@@ -150,7 +150,7 @@ function formBox (event){
         let newTime=event.target.description.value
 
         let Newhelp= new AskForHelp(newName,newContact,newTime)
-        console.log(Newhelp)
+        console.log(array)
     }
 
 
