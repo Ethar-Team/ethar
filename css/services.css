@@ -33,10 +33,10 @@ text-align: center;
 
     
     display: inline-block;
-
     width: 40%;
     margin-top: 30px;
     margin-left: 10%;
+
 
 }
 
@@ -45,6 +45,10 @@ text-align: center;
     text-align: justify;
     padding: 10px;
 
+}
+#left h2{
+    padding-top: 20px;
+    font-size: large;
 }
 
 #second{
@@ -70,7 +74,11 @@ text-align: center;
 
 }
 #teaching{
-    background-color:#95B0B6;
+    /* background-color:#95B0B6; */
+    background-image:url(/serviceimgs/teaching1.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+
 }
 #carpenting{
     background-color:#95B0B6;
@@ -94,16 +102,31 @@ position: relative;
 
 #joinHere{
     background-color: #95B0B6;
-    width: 80px;
+    width: 120px;
     height: 40px;
      margin-left: 20px; 
+     margin-bottom: 10px;
   border-radius: 10px;
+  font-size: larger;
+  border:0;
+  font-family: 'Times New Roman', Times, serif;
+  color: #022d3a;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-ser
+  
+  
   /* position: fixed;
   overflow: hidden; */
 }
+#joinHere:hover{
+    background-color: #fcda4e;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: scale(0.977);
+    transition-duration: 0.2s;
+}
 #sectionTwo2{
     background-color: #95B0B6;
-    
+
      margin-left: 20px; 
      border-radius: 10px;
      padding: 10px;
@@ -117,4 +140,84 @@ position: relative;
        font-size: 20px; */
     
 
+}
+#askForm{
+    margin-top: 20px;
+    text-align: center;
+}
+
+#askForm legend{
+    margin:5px;
+    text-align: center;
+    bottom: 10px;
+    padding: 10px;
+}
+#askForm label{
+    margin:30px;
+}
+#askForm input{
+    height: 40px;
+    border-radius:50px ;
+    padding: 10px;
+}
+#description{
+    height: 40px;
+    border-radius:50px ;
+    width:177px ;
+    text-align: center;
+    padding: 10px;
+}
+#form1{
+    display: inline;
+}
+#form1 label{
+    margin-left:10px;
+    padding-right: 10px;
+    color: #022d3a;
+}
+#form1 input{
+    margin-right: 10px;
+    border-radius: 50px;
+    height: 30px;
+    
+}
+#form1 legend{
+    font-size: x-large;
+    color: #022d3a;
+    padding: 20px;
+
+}
+#EXit{
+    margin-left: 10px; 
+    width: 80px;
+    border-radius: 50px;
+    height: 30px;
+    cursor: pointer;
+    font-size: large;
+    color: #022d3a;
+    font-family: 'Times New Roman', Times, serif;
+}
+#EXit:hover{
+    background-color: #fcda4e;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: scale(0.977);
+    transition-duration: 0.2s;
+}
+
+#submitAndFinish{
+    width: 80px; 
+    border-radius: 50px;
+    height: 30px;
+    cursor: pointer;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    color: #022d3a;
+}
+#submitAndFinish:hover{
+    background-color: #fcda4e;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: scale(0.977);
+    transition-duration: 0.2s;
 }
