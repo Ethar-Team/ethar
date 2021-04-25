@@ -2,6 +2,10 @@
 'use sttict ';
 
 
+
+//  type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+
+
 /////     Function Construction
 
 
@@ -259,7 +263,7 @@ function renderOfJoin(){
   let inp13 =document.createElement('input');
   inp13.setAttribute('id','inp13');
   inp13.setAttribute('type','number');
-  inp13.setAttribute('required','text');
+  inp13.setAttribute('required','number');
   field.appendChild(inp13);
 
   but2 =document.createElement('button');
@@ -274,7 +278,7 @@ function renderOfJoin(){
   but3 =document.createElement('button');
   but3.setAttribute('type','click');
   but3.setAttribute('id','EXit');
-  but3.textContent='close';
+  but3.textContent='Cancel';
   field.appendChild(but3);
   but3.addEventListener('click',removejoin);
 
@@ -282,7 +286,7 @@ function renderOfJoin(){
 
 function removejoin(event) {
   event.preventDefault();
-  formJoin.remove();
+  divDiv.remove();
   but.addEventListener('click',callrenderOfJoin);
 }
 
@@ -350,10 +354,14 @@ function saveworker() {
 gittingWorkerFromLocalStorage();
 
 
-
-
-
-
-
-
 getInfo();
+
+// let translate= Document.getElementById('google_translate_element');
+// translate.setAttribute('type','text/javascript');
+
+// type="text/javascript"
+// function googleTranslateElementInit() {
+//   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+// }
+
+
