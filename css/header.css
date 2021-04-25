@@ -1,6 +1,8 @@
 
 header{
     background-color: #114E60;
+    position: fixed;
+    width: 100%;
 }
 header img{
     margin-left: 5px;
@@ -23,5 +25,4 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   a:hover{
     background-color:white;
     font-size: 25px;
-    /* transform: scale(1.5); */
 }

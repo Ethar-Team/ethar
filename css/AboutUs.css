@@ -1,4 +1,7 @@
-
+body{
+    margin: 0px;
+    height: 100%;
+}
 #secone img:not(.link){
     position: relative;
     top: 30%;
@@ -9,35 +12,44 @@
     border-radius: 50%;
     cursor: pointer;
 }
-#secone{
-    position: relative;
 
-}
 #secone img:hover{
     opacity: 0.5;
 }
 #sectwo{
-    position: relative;
     float: left;
-    padding-left: 200px;
+    padding-left: 100px;
     padding-top: 30px;
+}
+main{
+    font-family: 'Anton', sans-serif;  
 }
 
 main h1{
-    font-family: 'Coda Caption', sans-serif;
+    font-family: 'Anton', sans-serif;
     text-align: center;
+    font-size: 40px;
+    color: #92967d;
 }
 #sectwo img{
-    width: 400px;
     height: 400px;
 
 }
 .link{
-    width: 20px;
-    height: 20px;   
-}
-#secthree{
     position: relative;
-    left:100px;
-    padding-top: 10px;
+    height: 20px;  
+    padding-left: 10px;
+}
+
+#secthree {
+    width: 70%;
+}
+#secthree h5{
+    position:relative;
+   left:200px;
+   font-size: large;
+}
+#secthree p,#secthree a{
+    position: relative;
+    left: 200px;
 }
