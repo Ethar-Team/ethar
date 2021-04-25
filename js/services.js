@@ -243,7 +243,6 @@ function renderOfJoin(){
   inp11.setAttribute('id','inp11') ;
   inp11.setAttribute('type','text');
   inp11.setAttribute('required','text');
-  
   field.appendChild(inp11);
 
   let lab12 =document.createElement('label');
