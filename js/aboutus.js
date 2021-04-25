@@ -1,5 +1,6 @@
 'use script';
 let container =document.getElementById('secone');
+// let linkToScroll=document.getElementsByClassName('imgs');
 let showEl = document.getElementById('sectwo');
 let showText=document.getElementById('secthree');
 // let ayyoubEl =document.getElementById('secone');
@@ -28,6 +29,9 @@ new About('Mohammad Hayagneh ','text','https://www.linkedin.com/in/mohammad-haya
 new About('Aysheh Abu mahfouz','text','https://www.linkedin.com/in/aysheh-mahfouz-28a48a20b/','https://github.com/Aysheh-Mahfouz','/images/Aysheh.jpg');
 
 function renderImg(index){
+  // let linkToScroll = document.createElement('a');
+  // linkToScroll.setAttribute('href','#sectwo');
+  // containerImg.appendChild()
   let imgEl= document.createElement('img');
   imgEl.setAttribute('src',`${About.allPeople[index].imgUrl}`);
   showEl.appendChild(imgEl);
@@ -105,3 +109,4 @@ function handleClicking(event) {
     container.removeEventListener('click',handleClicking);
   }
 }
+
