@@ -11,7 +11,7 @@
   flex-direction: column;
 }
 
-.Items{
+.items{
     width: 23%;
     display: inline-block;
     margin-left: 15%;
@@ -35,20 +35,20 @@
     opacity: 0.5;
 }
 
-.Items h4,p{
+.items h4,p{
     text-overflow: ellipsis;
     white-space: nowrap;
   overflow: hidden;
 }
 
-.Items img{
+.items img{
     margin-top: 5%;
     width: 100%;
     
 
 }
 
-.Items button{
+.items button{
     width: 51%;
     height: 47px;
     font-size: 1rem;
