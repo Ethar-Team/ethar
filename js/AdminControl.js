@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 'use strict';
 let bookingInfo =localStorage.getItem('CustInfo');
 bookingInfo=JSON.parse(bookingInfo);
@@ -104,52 +106,51 @@ if (joinRequest !== null){
   alert('Local storage of Joining Requests is empty');
 }
 
-//getting service info to admin
-// let serviceRequest =localStorage.getItem('volunteer');
-// // console.log(joinRequest);
-// serviceRequest=JSON.parse(serviceRequest);
-// let containerForService=document.getElementById('serviceRequest');
+// getting service info to admin
+let serviceRequest =localStorage.getItem('volunteer');
+serviceRequest=JSON.parse(serviceRequest);
+let containerForService=document.getElementById('serviceRequest');
 
 
-// let headerServ=document.createElement('h2');
-// containerForService.appendChild(headerServ);
-// headerServ.textContent='serviceRequest';
-// let tableForServ=document.createElement('table');
-// containerForService.appendChild(tableForServ);
-// tableForServ.setAttribute('id','tableForService');
-// function headerRowOfService(){
-//   let servRow=document.createElement('tr');
-//   tableForServ.appendChild(servRow);
-//   let headerEl=document.createElement('th');
-//   servRow.appendChild(headerEl);
-//   headerEl.textContent='Name';
-//   let headerEl1=document.createElement('th');
-//   servRow.appendChild(headerEl1);
-//   headerEl1.textContent='Job';
-//   let headerEl2=document.createElement('th');
-//   servRow.appendChild(headerEl2);
-//   headerEl2.textContent='Contact';
-//   for (let i=0; i<serviceRequest.length ; i++){
-//     let rowForEl=document.createElement('tr');
-//     tableForServ.appendChild(rowForEl);
-//     let infoHeader=document.createElement('td');
-//     rowForEl.appendChild(infoHeader);
-//     infoHeader.textContent=`${serviceRequest[i].name}`;
-//     console.log(joinRequest[i].name);
-//     let jobData =document.createElement('td');
-//     rowForEl.appendChild(jobData);
-//     jobData.textContent=`${serviceRequest[i].job}`;
-//     let contactData =document.createElement('td');
-//     rowForEl.appendChild(contactData);
-//     contactData.textContent=`${serviceRequest[i].ContactNumberr}`;
-//   }
-// }
+let headerServ=document.createElement('h2');
+containerForService.appendChild(headerServ);
+headerServ.textContent='serviceRequest';
+let tableForServ=document.createElement('table');
+containerForService.appendChild(tableForServ);
+tableForServ.setAttribute('id','tableForService');
 
-// if (joinRequest !== null){
-//   headerRowOfJoin();
-// }else{
-//   alert('Local storage of Joining Requests is empty');
-// }
+function headerRowOfService(){
+  let servRow=document.createElement('tr');
+  tableForServ.appendChild(servRow);
+  let headerElm=document.createElement('th');
+  servRow.appendChild(headerElm);
+  headerElm.textContent='Name';
+  let headerElm1=document.createElement('th');
+  servRow.appendChild(headerElm1);
+  headerElm1.textContent='Contact';
+  let headerElm2=document.createElement('th');
+  servRow.appendChild(headerElm2);
+  headerElm2.textContent='Description';
+  for (let i=0; i<serviceRequest.length ; i++){
+    let rowForElm=document.createElement('tr');
+    tableForServ.appendChild(rowForElm);
+    let infoHeader1=document.createElement('td');
+    rowForElm.appendChild(infoHeader1);
+    infoHeader1.textContent=`${serviceRequest[i].names}`;
+    // console.log(serviceReques[i].name);
+    let descData =document.createElement('td');
+    rowForElm.appendChild(descData);
+    descData.textContent=`${serviceRequest[i].countatNumber}`;
+    let contactData =document.createElement('td');
+    rowForElm.appendChild(contactData);
+    contactData.textContent=`${serviceRequest[i].description}`;
+  }
+}
+if (serviceRequest !== null){
+  headerRowOfService();
+}else{
+  alert('Local storage of Service Request is empty');
+}
 
 
 
