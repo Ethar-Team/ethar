@@ -171,29 +171,32 @@ function itemForm(){
   formForItem=document.createElement('form');
   formForItem.setAttribute('id','form2');
   secForm2.appendChild(formForItem);
-  fieldset=document.createElement('fieldset');
-  formForItem.appendChild(fieldset);
+  let h3=document.createElement('h3');
+  h3.textContent='Coustmer Information';
+  formForItem.appendChild(h3);
+  //fieldset=document.createElement('fieldset');
+  //formForItem.appendChild(fieldset);
 
-  let legend=document.createElement('legend');
-  fieldset.appendChild(legend);
-  legend.textContent='Enter Your Info :';
+  //let legend=document.createElement('legend');
+  //fieldset.appendChild(legend);
+  //legend.textContent='Enter Your Info :';
 
   let nameLabel=document.createElement('label');
-  fieldset.appendChild(nameLabel);
+  formForItem.appendChild(nameLabel);
   nameLabel.textContent='Name';
   nameLabel.setAttribute('for','customername');
   let input1=document.createElement('input');
   input1.setAttribute('type','text');
   input1.setAttribute('id','customername');
   input1.setAttribute('required','text');
-  fieldset.appendChild(input1);
+  formForItem.appendChild(input1);
 
   let nameLabe2=document.createElement('label');
-  fieldset.appendChild(nameLabe2);
+  formForItem.appendChild(nameLabe2);
   nameLabe2.textContent='Contact';
   nameLabe2.setAttribute('for','customercontact');
   let input2=document.createElement('input');
-  fieldset.appendChild(input2);
+  formForItem.appendChild(input2);
   input2.setAttribute('type','text');
   input2.setAttribute('id','customercontact');
   input2.setAttribute('required','text');
@@ -201,11 +204,11 @@ function itemForm(){
   submitBook.setAttribute('id','submitBook');
   submitBook.setAttribute('type','submit');
   submitBook.textContent='Submit';
-  fieldset.appendChild(submitBook);
+  formForItem.appendChild(submitBook);
   let cancelBtn=document.createElement('button');
   cancelBtn.setAttribute('onClick','cancelForm()');
   cancelBtn.textContent='Cancel';
-  fieldset.appendChild(cancelBtn);
+  formForItem.appendChild(cancelBtn);
   formForItem.addEventListener('submit',handleBook);
 
 }

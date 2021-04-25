@@ -102,5 +102,42 @@ body{
        width: 100vw;
     }
 
+    
+    #form2{
+          position: fixed; 
+         z-index: 100;
+        background: #fff;
+        height: 538px;
+        width: 30%;
+       margin: 20px auto;
+       top: 50%;
+       right: 32%;
+       height: 157px;
+       top: 30%;
+    right: 32%;
+    height:50%;
+     
+  }
 
-        
+
+#form2 input,select,textarea{
+    padding: 12px;
+      margin-bottom: 10px;
+      width: 82%;
+      border: 2px solid rgb(69, 69, 107);
+    border-radius: 25px;
+}
+
+#form2 button {
+    width: 38%;
+    height: 40px;
+    margin-left: 29%;
+    cursor: pointer;
+}
+
+#form2 h3{
+    text-align: center;
+    
+}
+
+ 
