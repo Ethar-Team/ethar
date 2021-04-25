@@ -3,10 +3,18 @@ header{
     background-color: #114E60;
     position: fixed;
     width: 100%;
+    overflow: hidden;
 }
+/* header nav #headlist a.active{
+    background-color: white;
+} */
 header img{
     margin-left: 5px;
 }
+#headlist a.active {
+    background-color: rgb(244, 247, 250);
+  }
+  
 #headlist{
  position: relative;
 display:block;
@@ -20,7 +28,6 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
     text-decoration: none;
     color:#95b0b6;
     padding: 20px;
-
 }
   a:hover{
     background-color:white;
