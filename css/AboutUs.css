@@ -2,6 +2,7 @@ body{
     margin: 0px;
     height: 100%;
     width: 100%;
+    background-color: rgb(222, 230, 236);
 }
 #secone img:not(.link){
     position: relative;
@@ -13,9 +14,9 @@ body{
     border-radius: 50%;
     cursor: pointer;
 }
-
 #secone img:hover{
     opacity: 0.5;
+    image-resolution: auto;
 }
 #sectwo{
     float: left;
@@ -25,23 +26,20 @@ body{
 main{
     font-family: 'Anton', sans-serif;  
 }
-
 main h1{
     font-family: 'Anton', sans-serif;
     text-align: center;
     font-size: 40px;
-    color: #92967d;
+    color: #073c55;
 }
 #sectwo img{
     height: 400px;
-
 }
 .link{
     position: relative;
     height: 20px;  
     padding-left: 10px;
 }
-
 #secthree {
     width: 70%;
 }

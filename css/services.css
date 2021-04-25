@@ -1,124 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
-*{
-    box-sizing: border-box;
-}
+ *{box-sizing: border-box;
+} 
 body{
     position: relative;
     background-color: rgb(222, 230, 236);
     margin: 0px;
     width: 100%;
 }
-
-
-#right{
-
+ #right{
     float: right;
     width: 50%;
     margin-top: 100px;
-
-}
-
-#left{
-    
-    margin-top: 120px;
-    margin-left: 100px;
-float: left;
-width: 40%;
-/*padding: 30px;*/
-text-align: center;
-}   
-
- form {
-
-    
+} 
+ #left{
+  margin-top: 155px;
+  margin-left: 100px;
+  float: left;
+  width: 40%;
+  text-align: center;
+}    
+  form {
     display: inline-block;
     width: 40%;
     margin-top: 30px;
     margin-left: 10%;
-
-
-}
-
-#left p {
-
+} 
+ #left p {
     text-align: justify;
-    padding: 10px;
-
 }
 #left h2{
     padding-top: 20px;
     font-size: large;
 }
-
 #second{
     display: inline-block;
     width: 100%;
-    margin: 10px;
     text-align: center;
 }
-
 #second form{
-
     display: inline-block;
-
     width: 25%;
     margin-top: 30px;
     margin-left: 50%;
 }
-
-
 #building{
-
-    background-color:#95B0B6;
-
+     background-color:#95B0B6; 
+     border-radius: 55%;
 }
 #teaching{
-    /* background-color:#95B0B6; */
-    background-image:url(/serviceimgs/teaching1.png);
-    background-repeat: no-repeat;
-    background-size:cover;
-
+     background-color:#95B0B6; 
+     border-radius: 55%;
 }
-#carpenting{
+#carpenting {
     background-color:#95B0B6;
+    border-radius: 55%;
 }
 #plumbing{
-
-background-color: #95B0B6;
+    border-radius: 55%;
+    background-color: #95B0B6;
 }
 #painting{
-
+    border-radius: 55%;
     background-color:#95B0B6;
 }
 #electric{
     background-color: #95B0B6;
+    border-radius: 55%;
+} 
+ main{
+ position: relative;
 }
-
-/* main{
-position: relative;
-
-} */
-
 #joinHere{
-    background-color: #95B0B6;
-    width: 120px;
-    height: 40px;
-     margin-left: 20px; 
-     margin-bottom: 10px;
+  background-color: #95B0B6;
+  width: 120px;
+  height: 40px;
+  margin-left: 20px; 
+  margin-bottom: 10px;
   border-radius: 10px;
   font-size: larger;
   border:0;
   font-family: 'Times New Roman', Times, serif;
   color: #022d3a;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-ser
-  
-  
-  /* position: fixed;
-  overflow: hidden; */
 }
 #joinHere:hover{
-    background-color: #fcda4e;
+    background-color: #0a5172;
     border-radius: 10px;
     cursor: pointer;
     transform: scale(0.977);
@@ -130,22 +97,11 @@ position: relative;
      margin-left: 20px; 
      border-radius: 10px;
      padding: 10px;
-     
-     
-       /* position: -webkit-sticky;
-       position: sticky;
-       top: 0;
-       background-color: yellow;
-       padding: 50px;
-       font-size: 20px; */
-    
-
 }
 #askForm{
     margin-top: 20px;
     text-align: center;
 }
-
 #askForm legend{
     margin:5px;
     text-align: center;
@@ -198,7 +154,7 @@ position: relative;
     font-family: 'Times New Roman', Times, serif;
 }
 #EXit:hover{
-    background-color: #fcda4e;
+    background-color: #062a5a;
     border-radius: 10px;
     cursor: pointer;
     transform: scale(0.977);
@@ -215,7 +171,6 @@ position: relative;
     color: #022d3a;
 }
 #submitAndFinish:hover{
-    background-color: #fcda4e;
     border-radius: 10px;
     cursor: pointer;
     transform: scale(0.977);

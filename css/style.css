@@ -2,10 +2,8 @@ body{
     position: relative;
     background-color: rgb(222, 230, 236);
     margin: 0px;
-    /* padding: 0px; */
 }
 main img{
-    /* padding: 30px; */
     width: 100%;
 }
 main h3{
