@@ -8,8 +8,6 @@
 
 /////     Function Construction
 
-
-
 let array=[];
 function AskForHelp (names,countatNumber,description){
 
@@ -19,8 +17,6 @@ function AskForHelp (names,countatNumber,description){
   array.push(this);
   saveLs ();
 }
-
-
 
 
 let arrayOfServices=[];
