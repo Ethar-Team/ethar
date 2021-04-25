@@ -118,7 +118,7 @@ function renderls(){
       Di.setAttribute('data-aos','fade-down-left');
 
     }else{
-      Di.setAttribute('data-aos','fade-down-right');
+      Di.setAttribute('data-aos','fade-down-left');
 
     }
 

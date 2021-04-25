@@ -32,5 +32,6 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 }
   a:hover{
     background-color:white;
+    transition-duration: .4s;
     font-size: 25px;
 }
