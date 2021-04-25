@@ -1,5 +1,6 @@
 'use script';
 let container =document.getElementById('secone');
+// let linkToScroll=document.getElementsByClassName('imgs');
 let showEl = document.getElementById('sectwo');
 let showText=document.getElementById('secthree');
 // let ayyoubEl =document.getElementById('secone');
@@ -28,6 +29,9 @@ new About('Mohammad Hayagneh ','I graduated from Yarmouk University  with a majo
 new About('Aysheh Abu mahfouz','text','https://www.linkedin.com/in/aysheh-mahfouz-28a48a20b/','https://github.com/Aysheh-Mahfouz','/images/Aysheh.jpg');
 
 function renderImg(index){
+  // let linkToScroll = document.createElement('a');
+  // linkToScroll.setAttribute('href','#sectwo');
+  // containerImg.appendChild()
   let imgEl= document.createElement('img');
   imgEl.setAttribute('src',`${About.allPeople[index].imgUrl}`);
   showEl.appendChild(imgEl);
@@ -44,14 +48,14 @@ function renderText(index){
   showText.appendChild(linkOne);
   let holdLink=document.createElement('img');
   linkOne.appendChild(holdLink);
-  holdLink.setAttribute('src','/images/github.png');
+  holdLink.setAttribute('src','/images/linkedin.png');
   holdLink.setAttribute('class','link');
   let linkTwo =document.createElement('a');
   linkTwo.setAttribute('href',`${About.allPeople[index].githubAcc}`);
   showText.appendChild(linkTwo);
   let holdLink2=document.createElement('img');
   linkTwo.appendChild(holdLink2);
-  holdLink2.setAttribute('src','/images/linkedin.png');
+  holdLink2.setAttribute('src','/images/github.png');
   holdLink2.setAttribute('class','link');
 }
 let count=0;
@@ -105,3 +109,4 @@ function handleClicking(event) {
     container.removeEventListener('click',handleClicking);
   }
 }
+

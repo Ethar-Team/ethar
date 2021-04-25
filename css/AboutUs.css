@@ -13,38 +13,44 @@ body{
     border-radius: 50%;
     cursor: pointer;
 }
-#secone{
-    position: relative;
 
-}
 #secone img:hover{
     opacity: 0.5;
 }
 #sectwo{
-    position: relative;
     float: left;
-    padding-left: 200px;
+    padding-left: 100px;
     padding-top: 30px;
-    /* background-color: blueviolet; */
+}
+main{
+    font-family: 'Anton', sans-serif;  
 }
 
 main h1{
-    font-family: 'Coda Caption', sans-serif;
+    font-family: 'Anton', sans-serif;
     text-align: center;
+    font-size: 40px;
+    color: #92967d;
 }
 #sectwo img{
-    width:30%;
     height: 400px;
 
 }
 .link{
-    /* width: 20px; */
-    height: 20px;   
-}
-#secthree{
     position: relative;
-   float:right;
-   padding-right: 300px;
+    height: 20px;  
+    padding-left: 10px;
+}
 
-/* background-color: crimson; */
+#secthree {
+    width: 70%;
+}
+#secthree h5{
+    position:relative;
+   left:200px;
+   font-size: large;
+}
+#secthree p,#secthree a{
+    position: relative;
+    left: 200px;
 }
