@@ -1,25 +1,28 @@
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
 }
 
 #display-sec{
     
-    
+    padding: 4%;
      background-color: #eee;
-     margin: 4% auto; 
+     margin: 0% ; 
      justify-content: center;
      align-items: center;
-     width: 80%;
-     flex-direction: column;
-     
+     width: 100%;
+    
 }
 
 .items{
     width: 20%;
+    height: 430px;
+    /* max-height: 430px; */
     display: inline-block;
-    margin-left: 5%;
-    margin-bottom: 4%;
-    margin-top: 4%;
+    margin-left: 4%;
+    
     padding: 20px;
     border: 2px solid rgb(106, 106, 158);
     text-align: center;
@@ -46,6 +49,7 @@ body{
 
 .items img{
     margin-top: 5%;
+    height: 150px;
     width: 100%;
     
 
@@ -63,10 +67,19 @@ body{
 }
 #form-sec{
     padding-top: 80px;
+    position: relative;
 }
+
+#form-sec img{
+    width: 100%;
+    
+ }
 #form1{
-          width: 35%;
+         position: absolute; 
+         width: 35%;
           margin: 20px auto;
+          top:19%;
+          right: 11%;
           
 }
 
@@ -84,6 +97,7 @@ body{
           width: 89%;
       }
 
+
       #form1 button {
         width: 38%;
         height: 40px;
@@ -91,16 +105,7 @@ body{
         cursor: pointer;
     }
 
-    #test{
-        padding-top: 80px;
-       
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    #test img{
-       width: 100vw;
-    }
+  
 
 
         
