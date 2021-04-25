@@ -3,24 +3,29 @@
 *{
     box-sizing: border-box;
 }
-
-body {
-
-    background-color: whitesmoke;
-    font-family: 'EB Garamond', serif;}
+body{
+    position: relative;
+    background-color: rgb(222, 230, 236);
+    margin: 0px;
+    width: 100%;
+}
 
 
 #right{
 
     float: right;
     width: 50%;
+    margin-top: 100px;
 
 }
 
 #left{
+    
+    margin-top: 120px;
+    margin-left: 100px;
 float: left;
-width: 50%;
-padding: 30px;
+width: 40%;
+/*padding: 30px;*/
 text-align: center;
 }   
 
@@ -38,6 +43,7 @@ text-align: center;
 #left p {
 
     text-align: justify;
+    padding: 10px;
 
 }
 
@@ -60,23 +66,55 @@ text-align: center;
 
 #building{
 
-    background-color:cornflowerblue;
+    background-color:#95B0B6;
 
 }
 #teaching{
-    background-color: cyan;
+    background-color:#95B0B6;
 }
 #carpenting{
-    background-color: sandybrown;
+    background-color:#95B0B6;
 }
 #plumbing{
 
-background-color: deeppink;
+background-color: #95B0B6;
 }
 #painting{
 
-    background-color: gold;
+    background-color:#95B0B6;
 }
 #electric{
-    background-color: springgreen;
+    background-color: #95B0B6;
+}
+
+/* main{
+position: relative;
+
+} */
+
+#joinHere{
+    background-color: #95B0B6;
+    width: 80px;
+    height: 40px;
+     margin-left: 20px; 
+  border-radius: 10px;
+  /* position: fixed;
+  overflow: hidden; */
+}
+#sectionTwo2{
+    background-color: #95B0B6;
+    
+     margin-left: 20px; 
+     border-radius: 10px;
+     padding: 10px;
+     
+     
+       /* position: -webkit-sticky;
+       position: sticky;
+       top: 0;
+       background-color: yellow;
+       padding: 50px;
+       font-size: 20px; */
+    
+
 }
