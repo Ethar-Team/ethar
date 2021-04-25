@@ -114,13 +114,7 @@ function renderls(){
     Di.setAttribute('class','items');
 
     Di.setAttribute('id',`item${counter}`);
-    if(counter%2===0){
-      Di.setAttribute('data-aos','fade-down-left');
-
-    }else{
-      Di.setAttribute('data-aos','fade-down-left');
-
-    }
+    Di.setAttribute('data-aos','zoom-in');
 
 
     secTwo.appendChild(Di);
