@@ -8,8 +8,6 @@
 
 /////     Function Construction
 
-
-
 let array=[];
 function AskForHelp (names,countatNumber,description){
 
@@ -19,8 +17,6 @@ function AskForHelp (names,countatNumber,description){
   array.push(this);
   saveLs ();
 }
-
-
 
 
 let arrayOfServices=[];
@@ -115,7 +111,8 @@ function formRander(){
   fieldset.appendChild(nameLabel);
   nameLabel.textContent='Name';
   nameLabel.setAttribute('for','customername');
-
+  let br0=document.createElement('br');
+  fieldset.appendChild(br0);
   let input1=document.createElement('input');
   input1.required;
   fieldset.appendChild(input1);
@@ -123,6 +120,7 @@ function formRander(){
   input1.setAttribute('id','customername');
   input1.setAttribute('required','text');
   let br1=document.createElement('br');
+  fieldset.appendChild(br1);
 
 
   let nameLabe2=document.createElement('label');
@@ -136,6 +134,8 @@ function formRander(){
   input2.setAttribute('required','text');
 
   let br2=document.createElement('br');
+  fieldset.appendChild(br2);
+
 
 
   let nameLabe3=document.createElement('label');
@@ -149,6 +149,8 @@ function formRander(){
   input3.setAttribute('required','text');
 
   let br3=document.createElement('br');
+  fieldset.appendChild(br3);
+
 
   let submit=document.createElement('input');
   fieldset.appendChild(submit);
@@ -233,7 +235,7 @@ function renderOfJoin(){
 
   let lega = document.createElement('legend');
   field.appendChild(lega);
-  lega.textContent='join zone';
+  lega.textContent='Join zone';
 
   let lab11 =document.createElement('label');
   lab11.setAttribute('for','inp11');
