@@ -1,4 +1,4 @@
-
+*{box-sizing: border-box;}
 header{
     background-color: #114E60;
     position: fixed;
@@ -15,7 +15,16 @@ header img{
 #headlist a.active {
     background-color: rgb(244, 247, 250);
   }
-  
+
+  #google_translate_element{
+      display: inline-block;
+      position: absolute;
+margin-left: 50px;
+margin-top:15px;
+
+
+
+  }
 #headlist{
  position: relative;
 display:block;
