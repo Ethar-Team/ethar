@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: #fff;
+
+}
+header{
+    background-color: #114E60;
+    position: fixed;
+    width: 100%;
+    height: 67px;
+    overflow: hidden;
+    z-index:5;
+    top: 0px;
+}
+header img{
+    margin: 10px 0 0 20px;
+}
+#headlist a.active {
+    background-color: rgb(244, 247, 250);
+  }
+  
+#headlist{
+ position: relative;
+ display:block;
+ right: 50px ;
+ float:right;
+ margin-top: 20px;
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#headlist a{
+    text-decoration: none;
+    color:#95b0b6;
+    padding: 20px;
+}
+a:hover{
+    background-color:white;
+    transition-duration: .4s;
+    font-size: 25px;
+}
+aside{
+    top: 67px;
+    float: left;
+    width: 20%;
+    height: 100%;
+    position:fixed;
+    background-color:#95b0b6;
+    z-index: 5;
+    color: #114E60;
+    padding-left: 10px;
+}
+#right img{
+    border-radius: 50%;
+    float: left;
+}
+#right div{
+    margin-bottom: 10px;
+    clear: both;
+    height: 10%;
+    position: relative;
+}
+#right div h5{
+display: inline;
+padding-top: 30px;
+
+}
+#left{
+    position: relative;
+    top: 67px;
+    height: 490px;
+    float: right;
+    width: 80%;
+    color: #114E60;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #ebebeb;
+    z-index: 0;
+
+}
+#left section{
+    height: 100vh;
+
+}
+aside div:hover{
+    background-color: rgb(54, 99, 93);
+    color: cornsilk;
+    border-radius: 23px;
+}
+button{
+    padding: auto;
+    margin-left: 50%;  
+}
+/* #left fieldset{
+    margin-left: 20%;
+    margin-right: 20%;
+    background-image: url(https://st2.depositphotos.com/1785475/7603/v/950/depositphotos_76031891-stock-illustration-cube-light-pattern-background-vector.jpg);
+    background-size: 100%;
+}
+#left input {
+    padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  resize: vertical;
+}
+#left textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+#left label{
+    padding: 12px 12px 12px 0;
+  display: inline-block;
+} */
+
+#left form {
+  background: #fff;
+  box-shadow: 0 30px 60px 0 #95b0b6;
+  border-radius: 5px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  left: 0;
+  right: 0;
+  border-top: 5px solid #114E60;
+  z-index: 0;
+  animation: bounce 1.5s infinite;
+}
+#left input ,#left textarea {
+    background-color: #ebebeb;
+    color: #114E60;
+    display: block;
+  margin: 2px auto;
+  min-width: 300px;
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  transition: all 0.5s ease 0s;
+}
+#left input:hover {
+    border-bottom: 5px solid #114E60;
+    height: 30px;
+    width: 360px;
+    transition: ease 0.5s;
+}
+#left textarea{
+    background-color: #ebebeb;
+    overflow: hidden;
+    height: 3rem;
+}
+  
+#left textarea:hover {
+    border-bottom: 5px solid #114E60;
+    height: 6em;
+    width: 380px;
+    transition: ease 0.5s;
+}
+  
