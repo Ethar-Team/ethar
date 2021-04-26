@@ -209,7 +209,7 @@ let but2;
 let formJoin;
 let but3 ;
 let divForForm;
-
+let formEl;
 //let sectionOne=document.getElementById('sec-one');
 let sectionTwo=document.getElementById('sectionTwo2');
 function renderOfJoin(){
@@ -217,7 +217,7 @@ function renderOfJoin(){
   divForForm.setAttribute('id','divForForme');
   sectionTwo.appendChild(divForForm);
 
-  formJoin =document.createElement('form');
+  formJoin=document.createElement('form');
   formJoin.setAttribute('id','form1');
   divForForm.appendChild(formJoin);
 
@@ -265,7 +265,7 @@ function renderOfJoin(){
   field.appendChild(but2);
   formJoin.addEventListener('submit',handleSubmit);
 
-
+  formEl=formJoin;
   but3 =document.createElement('button');
   but3.setAttribute('type','click');
   but3.setAttribute('id','cancel');
@@ -366,28 +366,20 @@ function openForm() {
 function closeForm() {
   popUpForm.style.display = 'none';
 }
-console.log(formJoin);
 
 
-$(window).click(function() {
-  closeForm();
-  divForForm.remove();
-  but.addEventListener('click',callrenderOfJoin);
-});
 
-$('#form').click(function(event){
-  event.stopPropagation();
-});
-// formJoin.addEventListener('click',cancelform);
-// function cancelform (event){
-//   event.preventDefault();
-//   // popUpForm.removeEventListener('click',cancelform);
-//   console.log(event.path);
-//   the path of input [input#inp12, fieldset, form#form1, div, section#sectionTwo2, main, body, html, document, Window]
-//   if (event.path.length<=8){
-//     closeForm();
-//     divForForm.remove();
-//     but.addEventListener('click',callrenderOfJoin);
-//   }
+popUpForm.addEventListener('click',cancelform);
+function cancelform (event){
+  event.preventDefault();
+  popUpForm.removeEventListener('click',cancelform);
 
-//   formJoin.addEventListener('submit',handleSubmit);
+  // console.log(event.path);
+  //the path of input [input#inp12, fieldset, form#form1, div, section#sectionTwo2, main, body, html, document, Window]
+  if (event.path.length<=8){
+    closeForm();
+    divForForm.remove();
+    but.addEventListener('click',callrenderOfJoin);
+    popUpForm.addEventListener('click',cancelform);
+  }
+}
