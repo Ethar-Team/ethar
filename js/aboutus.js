@@ -94,12 +94,14 @@ function handleClicking(event) {
       showText.innerHTML='';
       renderImg(5);
       renderText(5);
-    }else if(event.target.id ==='aysheh'){
-      showEl.innerHTML='';
-      showText.innerHTML='';
-      renderImg(6);
-      renderText(6);
-    } else{
+    }
+    // else if(event.target.id ==='aysheh'){
+    //   showEl.innerHTML='';
+    //   showText.innerHTML='';
+    //   renderImg(6);
+    //   renderText(6);
+    // }
+    else{
       showEl.innerHTML='';
       showText.innerHTML='';
     }
