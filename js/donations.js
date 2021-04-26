@@ -61,6 +61,13 @@ function handleSubmit(event){
 
   render();
   saveToLs();
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Thank you for your donation',
+    showConfirmButton: false,
+    timer: 2000
+  });
 
 
 }
@@ -147,6 +154,11 @@ function renderls(){
       unavalible.setAttribute('class','absImg');
       let div=document.getElementById(`item${i}`);
       div.appendChild(unavalible);
+      but=document.createElement('button');
+      but.setAttribute('id',`btn${counter}`);
+      Di.appendChild(but);
+      but.textContent='Book It!';
+      but.style.visibility='hidden';
     }
     counter++;
     but.addEventListener('click',handlebutton);
@@ -201,7 +213,9 @@ function itemForm(){
   formForItem.appendChild(submitBook);
   let cancelBtn=document.createElement('button');
   cancelBtn.setAttribute('onClick','cancelForm()');
-  cancelBtn.textContent='Cancel';
+  cancelBtn.setAttribute('id','cancleBtn');
+
+  cancelBtn.textContent='X';
   formForItem.appendChild(cancelBtn);
   formForItem.addEventListener('submit',handleBook);
 
@@ -222,6 +236,7 @@ function handleBook(event){
 function handlebutton(event){
   event.preventDefault();
   openForm();
+ 
   divIdNumber= event.target.id;
   divIdName=divIdNumber;
   divIdNumber=getNumberFromString(divIdNumber);
@@ -230,7 +245,8 @@ function handlebutton(event){
     itemForm();
     Donation.allItems[divIdNumber].value++;
     let myobj = document.getElementById(divIdName);
-    myobj.remove();
+    console.log(myobj);
+    myobj.style.visibility='hidden';
     saveToLs();
   }
 }
@@ -259,11 +275,14 @@ function cancelForm(){
 gettingOrderFromLs1();
 
 function repeatBookIt(divIdNumber) {
-  but=document.createElement('button');
-  but.setAttribute('id',`btn${divIdNumber}`);
-  let theDiv=document.getElementById(`item${divIdNumber}`);
-  theDiv.appendChild(but);
-  but.textContent='Book It!';
+  // but=document.createElement('button');
+  // but.setAttribute('id',`btn${divIdNumber}`);
+  // let theDiv=document.getElementById(`item${divIdNumber}`);
+  // theDiv.appendChild(but);
+  // but.textContent='Book It!';
+   but = document.getElementById(divIdName);
+  console.log(but);
+  but.style.visibility='visible';
   but.addEventListener('click',handlebutton);
   Donation.allItems[divIdNumber].value--;
   saveToLs();
