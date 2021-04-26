@@ -3,47 +3,48 @@ body{
     height: 100%;
     width: 100%;
     background-color: rgb(222, 230, 236);
-
 }
 #secone img:not(.link){
     position: relative;
     top: 30%;
     left: 60px;
-    width: 100px;
-    height: 100px;
+    width: 15%;
+    height: 30%;
     padding: 30px;
     border-radius: 50%;
     cursor: pointer;
 }
-
-#secone img:hover{
+.imgs:hover {
     opacity: 0.5;
+    image-resolution: auto;
 }
+/* #secone p:nth-child(1){
+    position: absolute;
+    padding-left:20px;
+} */
 #sectwo{
     float: left;
     padding-left: 100px;
     padding-top: 30px;
 }
 main{
+    position: relative;
     font-family: 'Anton', sans-serif;  
 }
-
 main h1{
     font-family: 'Anton', sans-serif;
     text-align: center;
     font-size: 40px;
-    color: #92967d;
+    color: #073C55;
 }
 #sectwo img{
     height: 400px;
-
 }
 .link{
     position: relative;
     height: 20px;  
     padding-left: 10px;
 }
-
 #secthree {
     width: 70%;
 }
@@ -55,4 +56,23 @@ main h1{
 #secthree p,#secthree a{
     position: relative;
     left: 200px;
+}
+#hero{
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    filter: brightness(40%);
+}
+#paragh{
+display: inline-block;
+color:#ffffff;
+font-family: 'Times New Roman', Times, serif;
+font-size: x-large;
+font-weight: bold;
+/* border: 3px solid #F1F1F1; */
+margin-left: -90%;
+top:5%;
+position: absolute;
+width: 80%;
+padding: 20px;
+text-align: center;
 }

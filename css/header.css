@@ -5,7 +5,7 @@ header{
     background-color: #114E60;
     position: fixed;
     width: 100%;
-    /* overflow: hidden; */
+    
     z-index:1;
 }
 /* header nav #headlist a.active{
