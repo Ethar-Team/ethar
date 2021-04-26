@@ -2,14 +2,6 @@
 'use sttict ';
 
 
-
-//  type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-
-
-/////     Function Construction
-
-
-
 let array=[];
 function AskForHelp (names,countatNumber,description){
 
@@ -41,7 +33,7 @@ let electric=new Servies('electric','Generation and Power Supply,Transmission an
 
 
 
-
+let popUpForm=document.getElementById('sectionTwo2');
 /////    Rendering Functions
 
 
@@ -233,7 +225,7 @@ function renderOfJoin(){
 
   let lega = document.createElement('legend');
   field.appendChild(lega);
-  lega.textContent='join zone';
+  lega.textContent='Join Form';
 
   let lab11 =document.createElement('label');
   lab11.setAttribute('for','inp11');
@@ -271,13 +263,12 @@ function renderOfJoin(){
   but2.textContent='submit';
   field.appendChild(but2);
   formJoin.addEventListener('submit',handleSubmit);
-  //but2.addEventListener('submit',handleSubmit);
 
 
   but3 =document.createElement('button');
   but3.setAttribute('type','click');
-  but3.setAttribute('id','EXit');
-  but3.textContent='Cancel';
+  but3.setAttribute('id','cancel');
+  but3.textContent='X';
   field.appendChild(but3);
   but3.addEventListener('click',removejoin);
 
@@ -285,6 +276,7 @@ function renderOfJoin(){
 
 function removejoin(event) {
   event.preventDefault();
+  closeForm();
   divDiv.remove();
   but.addEventListener('click',callrenderOfJoin);
 }
@@ -306,7 +298,6 @@ function gittingWorkerFromLocalStorage() {
   if (order !==null){
     JoinUs.FormArray=order;
   }
-  console.log(JoinUs.FormArray);
 
 }
 let but=document.getElementById('joinHere');
@@ -315,6 +306,7 @@ but.addEventListener('click',callrenderOfJoin);
 
 function callrenderOfJoin(event){
   event.preventDefault();
+  openForm();
   renderOfJoin();
 
   //console.log('joinhere'+event);
@@ -330,7 +322,6 @@ function handleSubmit(event){
   console.log(event);
 
   name1=event.target.inp11.value;
-  //console.log(name1);
   profession=event.target.inp12.value;
   contnum=event.target.inp13.value;
 
@@ -340,6 +331,9 @@ function handleSubmit(event){
   //  formJoin.removeEventListener('submit',callrenderOfJoin);
   saveworker();
   console.log(JoinUs.FormArray);
+  closeForm();
+  divDiv.remove();
+  but.addEventListener('click',callrenderOfJoin);
 }
 
 
@@ -363,4 +357,23 @@ getInfo();
 //   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 // }
 
+
+function openForm() {
+  popUpForm.style.display = 'block';
+}
+
+function closeForm() {
+  popUpForm.style.display = 'none';
+}
+
+popUpForm.addEventListener('click',cancelform);
+function cancelform (event){
+  event.preventDefault();
+  // the path of input [input#inp12, fieldset, form#form1, div, section#sectionTwo2, main, body, html, document, Window]
+  if (event.path.length<=8){
+    closeForm();
+    divDiv.remove();
+    but.addEventListener('click',callrenderOfJoin);
+  }
+}
 
