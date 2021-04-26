@@ -56,7 +56,8 @@ main h1{
 }
 #hero{
     filter: blur(4px);
-    -webkit-filter: blur(4px);  
+    -webkit-filter: blur(4px);
+    filter: brightness(40%);
 }
 #paragh{
 display: inline-block;
@@ -66,10 +67,9 @@ font-size: x-large;
 font-weight: bold;
 /* border: 3px solid #f1f1f1; */
 margin-left: -90%;
-top:16%;
+top:11%;
 position: absolute;
 width: 80%;
 padding: 20px;
 text-align: center;
-background-color: rgba(0, 0, 0, 0.363);
 }
