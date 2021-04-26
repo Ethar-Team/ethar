@@ -11,18 +11,14 @@ header{
     background-color: #114E60;
     position: fixed;
     width: 100%;
-    height: 67px;
     overflow: hidden;
     z-index:5;
     top: 0px;
-}
-header img{
-    margin: 10px 0 0 20px;
-}
-#headlist a.active {
-    background-color: rgb(244, 247, 250);
-  }
-  
+} 
+ header img{
+    margin-left: 5px;
+} 
+
 #headlist{
  position: relative;
  display:block;
@@ -37,13 +33,9 @@ header img{
     color:#95b0b6;
     padding: 20px;
 }
-a:hover{
-    background-color:white;
-    transition-duration: .4s;
-    font-size: 25px;
-}
+
 aside{
-    top: 67px;
+    top: 74px;
     float: left;
     width: 20%;
     height: 100%;
@@ -52,12 +44,14 @@ aside{
     z-index: 5;
     color: #114E60;
     padding-left: 10px;
+   
 }
 #right img{
     position:absolute;
-    border-radius: 50%;
+    /* border-radius: 40%; */
     float: left;
     top: 9px;
+    left: 20px;
 }
 #right div{
     margin-bottom: 10px;
@@ -68,7 +62,7 @@ aside{
 #right div h5{
 position: absolute;
 display: inline-block;
-padding-left: 60px;
+padding-left: 70px;
 font-size: 18px;
 /* padding-bottom: 6px; */
 
@@ -182,9 +176,9 @@ button{
     transition: ease 0.5s;
 }
 #joinHere{
-    position: absolute;
+        position: absolute;
         background-color: #ebebeb;
-        width: 170px;
+       width: 170px;
         height: 40px;
         left: 210%;
         border-radius: 10px;
@@ -192,7 +186,8 @@ button{
         border:0;
         font-family: 'Times New Roman', Times, serif;
         color: #022D3A;
-        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-ser
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-ser;
+     
 }
 #joinHere:hover{
     background-color: #8bafbe;
