@@ -3,6 +3,8 @@
 }
 body{
     margin: 0;
+    /* position: absolute; */
+    height: 100vh;
 }
 
 #display-sec{
@@ -106,6 +108,16 @@ body{
         cursor: pointer;
     }
 
+    #sec-form2{
+        position: fixed;
+        height: 100vh;
+        top:0;
+        width: 100%;
+        background-color: rgba(110, 99, 99, 0.219);
+        z-index: 3;
+        display: none;
+    }
+    
   
 
 
