@@ -10,8 +10,8 @@
      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!--<link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css"> -->
-    <!-- <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css"> -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <link rel="shortcut icon" href="/images/ETHARlogo.png" type="image/x-icon">
 </head>
 <body>
@@ -41,10 +41,10 @@
 
     <main>
         
-        <section id="test">
-    <img src="https://via.placeholder.com/900x300/333" alt="">
-        </section>
+      
+       
         <section id="form-sec">
+            <img src="https://via.placeholder.com/900x300/333"  alt="">
             <form id="form1">
                 <fieldset>
                     <legend>Donate</legend>
@@ -52,15 +52,15 @@
                     <select name="Category" id="category">
                         <option value="food">Food</option>
                         <option value="clothes">Clothes</option>
-                        <option value="tools">tools</option>
-                        <option value="electronic">Electronic Divice</option>
+                        <option value="tools">Tools</option>
+                        <option value="electronic">Electronic Device</option>
                     </select>
                     <label for="imgurl">Image Link :</label>
-                    <input type="text" id="imgurl">
+                    <input type="text" id="imgurl" required  >
                     <label for="contus">Contact Info :</label>
-                    <input type="text" id="contus">
+                    <input type="text" id="contus" required>
                     <label for="description">Description</label>
-                    <textarea name="description" id="description" cols="30" rows="2"></textarea>
+                    <textarea name="description" id="description" cols="30" rows="2" required ></textarea>
                     <button type="submit" id="submit">Add Item</button>
                 </fieldset>
             </form>
