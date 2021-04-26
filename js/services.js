@@ -208,17 +208,18 @@ function getInfo(){
 let but2;
 let formJoin;
 let but3 ;
-let divDiv;
+let divForForm;
 
 //let sectionOne=document.getElementById('sec-one');
 let sectionTwo=document.getElementById('sectionTwo2');
 function renderOfJoin(){
-  divDiv = document.createElement('div');
-  sectionTwo.appendChild(divDiv);
+  divForForm = document.createElement('div');
+  divForForm.setAttribute('id','divForForme');
+  sectionTwo.appendChild(divForForm);
 
-  formJoin =document.createElement('Form');
+  formJoin =document.createElement('form');
   formJoin.setAttribute('id','form1');
-  divDiv.appendChild(formJoin);
+  divForForm.appendChild(formJoin);
 
   let field =document.createElement('fieldset');
   formJoin.appendChild(field);
@@ -277,7 +278,7 @@ function renderOfJoin(){
 function removejoin(event) {
   event.preventDefault();
   closeForm();
-  divDiv.remove();
+  divForForm.remove();
   but.addEventListener('click',callrenderOfJoin);
 }
 
@@ -332,7 +333,7 @@ function handleSubmit(event){
   saveworker();
   console.log(JoinUs.FormArray);
   closeForm();
-  divDiv.remove();
+  divForForm.remove();
   but.addEventListener('click',callrenderOfJoin);
 }
 
@@ -365,15 +366,28 @@ function openForm() {
 function closeForm() {
   popUpForm.style.display = 'none';
 }
+console.log(formJoin);
 
-popUpForm.addEventListener('click',cancelform);
-function cancelform (event){
-  event.preventDefault();
-  // the path of input [input#inp12, fieldset, form#form1, div, section#sectionTwo2, main, body, html, document, Window]
-  if (event.path.length<=8){
-    closeForm();
-    divDiv.remove();
-    but.addEventListener('click',callrenderOfJoin);
-  }
-}
 
+$(window).click(function() {
+  closeForm();
+  divForForm.remove();
+  but.addEventListener('click',callrenderOfJoin);
+});
+
+$('#form').click(function(event){
+  event.stopPropagation();
+});
+// formJoin.addEventListener('click',cancelform);
+// function cancelform (event){
+//   event.preventDefault();
+//   // popUpForm.removeEventListener('click',cancelform);
+//   console.log(event.path);
+//   the path of input [input#inp12, fieldset, form#form1, div, section#sectionTwo2, main, body, html, document, Window]
+//   if (event.path.length<=8){
+//     closeForm();
+//     divForForm.remove();
+//     but.addEventListener('click',callrenderOfJoin);
+//   }
+
+//   formJoin.addEventListener('submit',handleSubmit);
