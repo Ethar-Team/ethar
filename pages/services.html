@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/services.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <!-- <link rel="stylesheet" href="/css/reset.css"> -->
     <link rel="shortcut icon" href="/images/ETHARlogo.png" type="image/x-icon">
-    
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
     <title>Services</title>
 </head>
 
@@ -19,26 +18,23 @@
 
 <body>
     
+    <!-- <div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script> 
     
-    <header>
+     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
 
-        <img src="/images/ETHARlogo.png" alt="logo" width="70px" hight="70px">
-        <div id="google_translate_element">
-
-         <script type="text/javascript">
-         function googleTranslateElementInit() {
-           new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-         }
-     
-         </script> 
-         </div>
-
-     <nav id="headlist">
-         <a href="../index.html">Home</a>
-         <a href="donations.html">Donate</a>
-         <a href="services.html">Services</a>
-         <a href="AboutUs.html">About Us</a>
-
+     <header>
+         <a  href="/index.html" id="logo" class="logoone"><img src="/images/ETHARlogo.png" alt="logo" width="70px" hight="70px"></a>  
+         <nav id="headlist">
+         <a href="../index.html"><i class="fa fa-fw fa-home one"></i>Home</a>
+         <a href="donations.html"><i class="fa fa-heart one" aria-hidden="true"></i>Donate</a>
+         <a href="services.html"><i class="fa fa-fw fa-search one"></i>Services</a>
+         <a href="AboutUs.html"><i class="fa fa-fw fa-user one"></i>About Us</a>
      </nav>
 
  </header>
@@ -47,29 +43,46 @@
     <main>
 
 
-        <section id="first">
+        
 
-            <div id="right" >
+        <aside id="right" >
 
-                <h2 >Our Services</h2>
-                
-                <img src="/images/build.JPG" id="building" alt="building" width="200" height="300">
-                <img src="/images/teacher.png" id="teaching" alt="Teaching"width="200" height="300">
-                <img src="/images/carpente.png" id="carpenting" alt="carpenting "width="200" height="300">
-                <img src="/images/plump.JPG" id="plumbing" alt="other"width="200" height="300">
-                <img src="/images/paint.JPG" id="painting" alt="handcraft "width="200" height="300">
-                <img src="/images/elecrtic.png" id="electric" alt="electric"width="200" height="300">
-               
-                
+            <h2>Categories</h2>
+             <div class="catg" id="building">
+                 <img src="/images/brickwall (1).png" alt="building"width="40"hight="40">
+                 <h5>Building</h5>
+             </div>
+             <div class="catg" id="teaching">
+                 <img src="/images/executive.png" alt="Teaching"width="40"hight="40">
+                 <h5>Teaching</h5>
+             </div>
+             <div class="catg" id="carpenting">
+                <img src="/images/carpenter.png"  alt="carpenting "width="40"hight="40">
+                 <h5>Carpenting</h5>
+             </div>
+             <div class="catg" id="plumbing">
+                <img src="/images/plumber.png"  alt="other"width="40"hight="40">
+                <h5>Plumbing</h5>
 
              </div>
+             <div class="catg" id="painting">
+                <img src="/images/painter.png" alt="handcraft "width="40"hight="40">
+                <h5>Painting</h5>
+             </div>
+             <div class="catg" id="electric">
+                <img src="/images/lightbulb.png"  alt="electric"width="40"hight="40">     
+                <h5>Electric</h5>           
+             </div>   
+            <section id="sectionOne1">
+                <button type="submit" id="joinHere">Volunteer with us</button>
+            <section id="sectionTwo2">
+        </aside>
+        
+             <section id="left" >
 
-             <div id="left" >
 
+            </section>
 
-            </div>
-
-        </section>
 
 
         <section id="second">
@@ -79,9 +92,7 @@
 
 
 
-        <section id="sectionOne1">
-            <button type="submit" id="joinHere">Join Here</button>
-        <section id="sectionTwo2">
+        
         
         
         </section>
@@ -89,14 +100,13 @@
     </main>
     
     
-    <footer>
+    <!-- <footer>
         <div id="footer">
             <img src="/images/ETHARlogo.png" alt="logo" >
             <p>Phone: 302-187-9752  •  Fax: 352-787-7871   •  info@ethar-services.com</p>
-            
         </div>
-    <h5> &copy; Copyrights 2021</h5>
-    </footer>
+         <h5> &copy; Copyrights 2021</h5>
+    </footer> -->
 
     <script src="/js/services.js" ></script>
 </body>

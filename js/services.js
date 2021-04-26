@@ -8,6 +8,8 @@
 
 /////     Function Construction
 
+
+
 let array=[];
 function AskForHelp (names,countatNumber,description){
 
@@ -19,6 +21,8 @@ function AskForHelp (names,countatNumber,description){
 }
 
 
+
+
 let arrayOfServices=[];
 function Servies (name,paragraph){
   this.name=name;
@@ -27,7 +31,7 @@ function Servies (name,paragraph){
 
 }
 
-let building= new Servies('building','Designing or maintaining air conditioning, elevators, and other mechanical systems, distributing electricity and water supply, providing lighting and heating. ');
+let building= new Servies('building','designing or maintaining air conditioning, elevators and other mechanical systems,distributing electricity and water supply,providing lighting and heating.');
 let teaching= new Servies('teaching','We provide specialist teaching services to support children and young people with a variety of special educational needs and disabilities. We provide our specialist teaching services across all education settings, secondary, primary, mainstream, specialist and early years.');
 let carpentry= new Servies('carpenting','Measuring, marking up, cutting, shaping, fitting and finishing timber,Using a range of hand and power tools,Installing floor joists, floorboards, roof trusses and wall partitions,Fitting interiors such as staircases, doors, skirting boards, cupboards and kitchens,Putting up frames for bridges, roads, dams and buildings,Drawing and working with technical drawings,Working in residential or commercial buildings,Restoring buildings,Working in a workshop, a client’s business or home, or on a construction site,Carrying out jobs in dusty conditions or working outdoors in all weather and at height.');
 let plumbing=new Servies('plumbing','Install pipes and plumbing fixtures. Visually inspect equipment and operate test equipment such as pressure and vacuum gauges to determine the cause and location of trouble. Clear obstructions from sink drains and toilets, Troubleshoot problems and decide how to fix them. Repair pipes and plumbing fixtures,Do installations and repairs.Present recommendations to people.');
@@ -111,8 +115,7 @@ function formRander(){
   fieldset.appendChild(nameLabel);
   nameLabel.textContent='Name';
   nameLabel.setAttribute('for','customername');
-  let br0=document.createElement('br');
-  fieldset.appendChild(br0);
+
   let input1=document.createElement('input');
   input1.required;
   fieldset.appendChild(input1);
@@ -120,7 +123,6 @@ function formRander(){
   input1.setAttribute('id','customername');
   input1.setAttribute('required','text');
   let br1=document.createElement('br');
-  fieldset.appendChild(br1);
 
 
   let nameLabe2=document.createElement('label');
@@ -134,8 +136,6 @@ function formRander(){
   input2.setAttribute('required','text');
 
   let br2=document.createElement('br');
-  fieldset.appendChild(br2);
-
 
 
   let nameLabe3=document.createElement('label');
@@ -149,13 +149,12 @@ function formRander(){
   input3.setAttribute('required','text');
 
   let br3=document.createElement('br');
-  fieldset.appendChild(br3);
-
 
   let submit=document.createElement('input');
   fieldset.appendChild(submit);
   submit.setAttribute('type','submit');
   submit.setAttribute('value', 'Submit');
+  submit.setAttribute('id','askSubmit');
 
 }
 
@@ -235,7 +234,7 @@ function renderOfJoin(){
 
   let lega = document.createElement('legend');
   field.appendChild(lega);
-  lega.textContent='Join zone';
+  lega.textContent='join zone';
 
   let lab11 =document.createElement('label');
   lab11.setAttribute('for','inp11');
@@ -364,5 +363,3 @@ getInfo();
 // function googleTranslateElementInit() {
 //   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
 // }
-
-

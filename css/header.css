@@ -1,4 +1,6 @@
-*{box-sizing: border-box;}
+*{
+    box-sizing: border-box;
+}
 header{
     background-color: #114E60;
     position: fixed;
@@ -13,13 +15,15 @@ header img{
     margin-left: 5px;
 }
 
+#logo{
+    text-decoration: none;
+}
   
 #headlist{
- position: relative;
-display:block;
+position: relative;
 right: 50px ;
 float:right;
-margin-top: 20px;
+margin-top: 28px;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
@@ -27,9 +31,10 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
     text-decoration: none;
     color:#95b0b6;
     padding: 20px;
+    /* padding-bottom: 0px;
+    padding-top:0px; */
 }
-  a:hover{
-    background-color:white;
-    transition-duration: .4s;
-    font-size: 25px;
+  #headlist a:hover  {
+  transition-duration: .4s;
+  font-size:25px ;
 }
