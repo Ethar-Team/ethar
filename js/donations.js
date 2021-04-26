@@ -216,15 +216,18 @@ function itemForm(){
 
 function handleBook(event){
   event.preventDefault();
+  
   unPic(divIdNumber);
   let userName=event.target.customername.value;
   let contactInfo=event.target.customercontact.value;
   new Custinfo(userName,contactInfo,divIdNumber);
   saveToLsCust();
+  closeForm();
   formForItem.remove();
 }
 function handlebutton(event){
   event.preventDefault();
+  openForm();
   divIdNumber= event.target.id;
   divIdName=divIdNumber;
   divIdNumber=getNumberFromString(divIdNumber);
@@ -255,6 +258,7 @@ function unPic(indexOf){
 }
 
 function cancelForm(){
+  closeForm();
   formForItem.remove();
   repeatBookIt(divIdNumber);
 }
@@ -293,3 +297,10 @@ function gettingOrderFromLs1(){
     Custinfo.allItems = order;
   }
 }
+
+function openForm() {
+  document.getElementById("sec-form2").style.display = "block";
+ }
+ function closeForm() {
+  document.getElementById("sec-form2").style.display = "none";
+ }
