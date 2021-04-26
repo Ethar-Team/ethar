@@ -13,12 +13,19 @@
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="shortcut icon" href="/images/ETHARlogo.png" type="image/x-icon">
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+    <link rel="stylesheet" href="sweetalert2.min.css">
 </head>
 <body>
     
-   
+     <!-- <div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script> 
+    
+     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>  -->
 
 
 
@@ -41,8 +48,13 @@
      </nav>
  </header>
 
+
     <main>
+        
+      
+       
         <section id="form-sec">
+            <img src="/images/heroDonation.jpg"  alt="">
             <form id="form1">
                 <fieldset>
                     <legend>Donate</legend>
@@ -50,15 +62,15 @@
                     <select name="Category" id="category">
                         <option value="food">Food</option>
                         <option value="clothes">Clothes</option>
-                        <option value="tools">tools</option>
-                        <option value="electronic">Electronic Divice</option>
+                        <option value="tools">Tools</option>
+                        <option value="electronic">Electronic Device</option>
                     </select>
                     <label for="imgurl">Image Link :</label>
-                    <input type="text" id="imgurl">
+                    <input type="text" id="imgurl" required  >
                     <label for="contus">Contact Info :</label>
-                    <input type="text" id="contus">
+                    <input type="text" id="contus" required>
                     <label for="description">Description</label>
-                    <textarea name="description" id="description" cols="30" rows="2"></textarea>
+                    <textarea name="description" id="description" cols="30" rows="2" required ></textarea>
                     <button type="submit" id="submit">Add Item</button>
                 </fieldset>
             </form>
@@ -66,11 +78,13 @@
         <section id="display-sec">
             
         </section>
+
         <section id="sec-form2">
             <!-- <form id="foorm">
 
             </form> -->
         </section>
+        
        
     </main>
     <footer>
@@ -85,9 +99,15 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
-        duration: 2000,
+        duration: 1500,
         
       });
     </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="sweetalert2.all.min.js"></script>
+<!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+<script src="//cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.js"></script>
+<script src="sweetalert2.min.js"></script>
+
 </body>
 </html>

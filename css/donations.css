@@ -1,44 +1,49 @@
-body{
-    position: relative;
-    background-color: rgb(222, 230, 236);
-    margin: 0px;
+*:not(.items button){
+    box-sizing: border-box;
 }
+body{
+    margin: 0;
+    height: 100vh;
+}
+
 #display-sec{
-    /* width: 90%; */
-    background-color: #eee;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 4%;
-    /* display: flex; */
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-  flex-direction: column;
-  padding-top: 100px;
+    
+    padding: 4%;
+     background-color: #eee;
+     margin: 0% ; 
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+    
 }
 
 .items{
-    width: 23%;
+    width: 20%;
+    height: 342px;
+    max-height: 350px;
     display: inline-block;
-    margin-left: 15%;
-    margin-bottom: 1%;
-    margin-top: 2%;
+    margin-left: 4%;
+    margin-bottom: 2%;
     padding: 20px;
-    border: 2px solid rgb(17, 66, 105);
     text-align: center;
     border-radius: 10%;
     position: relative;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to right, #104577, #385f92);
+    background-color:  #93edc7;
    
 }
 
 .absImg{
-    position: absolute;
+    /* position: absolute;
     top: 12%;
     left: 0;
     transform: rotate(-30deg);
-    opacity: 0.5;
+    opacity: 0.5; */
+    position: absolute;
+    top: 48%;
+    left: 0;
+    transform: rotate(-9deg);
+    opacity: 0.7;
 }
 
 .items h4,p{
@@ -49,6 +54,7 @@ body{
 
 .items img{
     margin-top: 5%;
+    height: 150px;
     width: 100%;
     
 
@@ -58,13 +64,201 @@ body{
     width: 51%;
     height: 47px;
     font-size: 1rem;
-    background-color: rgb(141, 150, 179);
+    background-color: rgb(134, 167, 240);
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: -3%;
+    border-radius: 50%;
+    cursor: pointer;
 }
-#form-sec{
-    padding-top: 80px;
+
+.items button:hover{
+    background-color: rgb(38, 192, 133);
+    transition-duration: .3s;
 
 }
+#form-sec{
+    padding-top: 74px;
+    position: relative;
+}
+
+#form-sec img{
+    width: 100%;
+    height: 800px;
+    
+ }
+#form1{
+         position: absolute; 
+         width: 35%;
+          margin: 20px auto;
+          top:17%;
+          right: 4%;
+          background-color: #bcafaf73;
+          border-radius: 10px;
+          
+}
+#form1 label{
+    display: block;
+}
+
+#form1 input,select,textarea{
+        padding: 12px;
+          margin-bottom: 10px;
+          width: 100%;
+          border: 2px solid rgb(69, 69, 107);
+        border-radius: 25px;
+        
+      }
+
+      #form1 button {
+        width: 38%;
+        height: 40px;
+        margin-left: 29%;
+        cursor: pointer;
+        background: #15301459;
+    
+        
+        font-size:large;
+        
+        border: 1px solid #eee;
+        
+        border-radius: 20px;
+        
+        
+        
+        text-shadow:none;
+    }
+    #form1 button:hover{
+    background: #4d618d;
+    
+    color: #fff;
+    
+    border: 1px solid #eee;
+    
+    border-radius: 20px;
+    
+    
+    text-shadow:none;}
+#form1 legend{
+    margin-bottom: 2%;
+    font-size: 2rem;
+    color: #1e3824;
+    text-align: center;
+    font-weight: bold;
+}
+#form1 fieldset{
+    border:none;
+
+}
+  
+
+    
+    #form2{
+        position: relative;
+         border-radius: 10px;
+         
+        height: 400px;
+        width: 51%;
+       margin: 14% auto;
+       background-color: #8BD976;
+       padding:1%
+       
+       
+    }
+     
+  
+
+
+#form2 input,select,textarea{
+    padding: 12px;
+    
+      margin-bottom: 10px;
+      width: 100%;
+      border: 2px solid rgb(69, 69, 107);
+    border-radius: 25px;
+}
+
+#form2 #submitBook {
+    width: 38%;
+    height: 40px;
+    margin-left: 29%;
+    cursor: pointer;
+    display: inline-block;
+    background: rgb(111, 165, 111);
+    margin-top:6%;
+
+    color: #ba506d;
+    font-size:large;
+    
+    border: 2px solid #eee;
+    
+    border-radius: 20px;
+    
+    
+    text-shadow:none;
+}
+#form2 #submitBook:hover{
+    background: #016ABC;
+    
+    color: #fff;
+    
+    border: 1px solid #eee;
+    
+    border-radius: 20px;
+    
+    
+    text-shadow:none;
+    } 
+
+#form2 #cancleBtn{
+    position: absolute;
+    background-color:#ba506c00 ;
+    color:#ba506d;
+    border:none;
+    font-size: x-large;
+    width: 7%;
+    height: 27px;
+    margin-left: 29%;
+    cursor: pointer;
+    display: inline-block;
+    top:  13px;
+    right: 13px;
+    
+    
+}
+
+ #form2 #cancleBtn:hover{
+    transform: scale(1.4);
+    background-color: #ba506d;
+     border-radius: 100%; 
+     color:black;
+
+     
+}
+
+#form2 h3 {
+    text-align: left;
+    color: #ba506d;
+    font-size: x-large;
+}
+#form2 label{
+    display: block;
+    padding-bottom: 25px;
+    
+}
+
+#sec-form2{
+    position: fixed;
+    height: 100vh;
+    top:0;
+    width: 100%;
+    /* background-color: rgba(110, 99, 99, 0.3); */
+    z-index: 3;
+    backdrop-filter: blur(3px);
+
+    display: none;
+}
+
+
+        

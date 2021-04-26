@@ -3,7 +3,7 @@ header{
     background-color: #114E60;
     position: fixed;
     width: 100%;
-    overflow: hidden;
+    
     z-index:1;
 }
 /* header nav #headlist a.active{
@@ -12,19 +12,8 @@ header{
 header img{
     margin-left: 5px;
 }
-#headlist a.active {
-    background-color: rgb(244, 247, 250);
-  }
 
-  #google_translate_element{
-      display: inline-block;
-      position: absolute;
-margin-left: 50px;
-margin-top:15px;
-
-
-
-  }
+  
 #headlist{
  position: relative;
 display:block;
@@ -41,5 +30,6 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 }
   a:hover{
     background-color:white;
+    transition-duration: .4s;
     font-size: 25px;
 }
