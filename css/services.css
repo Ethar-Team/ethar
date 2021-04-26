@@ -140,10 +140,10 @@ button{
   z-index: 0;
   animation: bounce 1.5s infinite;
 }
-#left input ,#left textarea {
-    background-color: #ebebeb;
-    color: #f8f5f1;
-    display: block;
+#left input ,#left textarea  {
+  background-color: #ebebeb;
+  color: #f8f5f1;
+  display: block;
   margin: 2px auto;
   min-width: 300px;
   padding: 10px;
@@ -151,12 +151,24 @@ button{
   border: none;
   transition: all 0.5s ease 0s;
 }
-#left input:hover {
-    border-bottom: 5px solid #f8f5f1;
-    height: 30px;
-    width: 360px;
-    transition: ease 0.5s;
+
+#left input:last-child {
+
+    color:#114E60;
+    font-size: large;
+    border-radius: 10px;
+
 }
+#askSubmit:hover {
+    color: #f8f5f1;
+    background-color: #8f1c6c;
+    cursor: pointer;
+    border-radius: 10px;
+
+    transform: scale(0.977);
+    transition-duration: 0.2s;
+}
+
 #left textarea{
     background-color: #ebebeb;
     overflow: hidden;

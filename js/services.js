@@ -154,6 +154,7 @@ function formRander(){
   fieldset.appendChild(submit);
   submit.setAttribute('type','submit');
   submit.setAttribute('value', 'Submit');
+  submit.setAttribute('id','askSubmit');
 
 }
 
