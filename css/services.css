@@ -140,7 +140,7 @@ button{
   z-index: 0;
   animation: bounce 1.5s infinite;
 }
-#left input ,#left textarea  {
+#left input ,#left textarea {
   background-color: #ebebeb;
   color: #f8f5f1;
   display: block;
@@ -161,7 +161,7 @@ button{
 }
 #askSubmit:hover {
     color: #f8f5f1;
-    background-color: #8f1c6c;
+    background-color: #8bafbe;
     cursor: pointer;
     border-radius: 10px;
 
@@ -183,7 +183,7 @@ button{
 }
 #joinHere{
     position: absolute;
-        background-color: #95B0B6;
+        background-color: #ebebeb;
         width: 170px;
         height: 40px;
         left: 210%;
@@ -195,7 +195,7 @@ button{
         font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-ser
 }
 #joinHere:hover{
-    background-color: #0A5172;
+    background-color: #8bafbe;
     border-radius: 10px;
     cursor: pointer;
     transform: scale(0.977);
