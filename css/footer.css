@@ -1,21 +1,21 @@
 footer{
     clear: both;
     position: relative;
-    background-color:#072c36;
+    background-color:#000000;
     text-align: center;
     width: 100%;
     padding-bottom:10px;
     height: 100%;
-}
+} 
 footer h5,footer p{
-    padding-top: 25px;
+    /* padding-top: 25px; */
     font-size:large;
-    color: #95b0b6;
+    color: white;
 }
 footer img{
     padding-top:30px;
-   width:230px;
+   width:140px;
 }
 #footer{
-    background-color:#114E60 ;
+    background-color:#363636 ;
 }
