@@ -1,6 +1,6 @@
 body{
     position: relative;
-    background-color: rgb(222, 230, 236);
+    background-color:white;
     margin: 0px;
 }
 main img{
@@ -20,7 +20,6 @@ main p{
     position: absolute;
     width: 12%;
     height: 12%;
-    /* float: left; */
     left: 22%;
     margin-top:3%;
  
@@ -46,30 +45,30 @@ main p{
 }
 
 #what,#vision,#goals {
-    background-color: #95b0b694;
-    color:#114E60;
+    background-color: #363636;
+    color:white;
     font-family: 'Acme', sans-serif;
     margin-right:200px; 
     /* clear: both;  */
 }
  h3:hover ,h3:hover, h3:hover{
     transform: scale(1.2);
-    color:#114E60;
+    color:black;
 }
 #vis{
     position: relative;
-    color:#114E60;
+    color:black;
     margin-left: 41%;
 }
 #mis{
     position: relative;
-    color:#114E60;
+    color:black;
     margin-right: 50%;
 }
 #goal{
    
     position: relative;
-    color:#114E60;
+    color:black;
     margin-right:50%;
 }
 #what p,#vision p,#goals p{

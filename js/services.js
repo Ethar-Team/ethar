@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 'use sttict ';
 
-
+let serviceImage=document.getElementById('imageService');
 let array=[];
 function AskForHelp (names,countatNumber,description){
 
@@ -80,7 +80,7 @@ function renderform (event){
 
 
     formRander();
-
+    removeImage();
   }
 
 
@@ -377,4 +377,8 @@ function cancelform (event){
     but.addEventListener('click',callrenderOfJoin);
     popUpForm.addEventListener('click',cancelform);
   }
+}
+
+function removeImage(){
+  serviceImage.style.display='none';
 }
