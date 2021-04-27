@@ -172,8 +172,8 @@ aside button{
     width: 30%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30vh;
-    height: 300px;
+    margin-top: 20vh;
+    height: 230px;
     position: relative;
 }
 #sectionTwo2 fieldset{
@@ -206,7 +206,7 @@ aside button{
     width: 98%;
     height: 11%;
     border-radius: 10px;
-    margin-bottom: 46px;
+    margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
     color:black;
