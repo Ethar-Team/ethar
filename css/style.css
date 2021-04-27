@@ -2,10 +2,8 @@ body{
     position: relative;
     background-color: rgb(222, 230, 236);
     margin: 0px;
-    /* padding: 0px; */
 }
 main img{
-    /* padding: 30px; */
     width: 100%;
 }
 main h3{
@@ -16,35 +14,92 @@ main p{
     text-align:justify;
     margin:10px;
 }
+
+#photo{
+    display: inline-block;
+    position: absolute;
+    width: 12%;
+    height: 12%;
+    /* float: left; */
+    left: 22%;
+    margin-top:3%;
+ 
+}
+
+#images{
+    position: relative;
+    width: 15%;
+    height: 15%;
+    float: right;
+    margin-right:25%;
+    margin-top:5%;
+
+    
+}
+#pic{
+    position: relative;
+    width: 12%;
+    height: 12%;
+    float: right;
+    margin-right:25%;
+    margin-top:5%;
+}
+
 #what,#vision,#goals {
     background-color: #95b0b694;
     color:#114E60;
     font-family: 'Acme', sans-serif;
-    margin-right:200px;  
+    margin-right:200px; 
+    /* clear: both;  */
 }
-#what:hover,#vision:hover,#goals:hover{
+ h3:hover ,h3:hover, h3:hover{
     transform: scale(1.2);
+    color:#114E60;
+}
+#vis{
+    position: relative;
+    color:#114E60;
+    margin-left: 41%;
+}
+#mis{
+    position: relative;
+    color:#114E60;
+    margin-right: 50%;
+}
+#goal{
+   
+    position: relative;
+    color:#114E60;
+    margin-right:50%;
 }
 #what p,#vision p,#goals p{
     font-style:normal;
     font-size: large;
+    text-align: justify;
 
 } 
 #what{
   position: relative;
   width:40%;
   left:100px;
+  padding: 15px;
+  border-radius: 20px;
   
 }
 #vision{
     position: relative;
     width:40%;
     left: 600px;
+    padding: 15px;
+    border-radius: 20px;
+    margin-left: 150px;
 }
 #goals{
     position: relative;
     width:40%;
     left:100px;
+    padding: 15px;
+    border-radius: 20px;
 }
 main section{
     margin-bottom: 50px;

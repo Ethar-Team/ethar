@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 
@@ -61,6 +62,13 @@ function handleSubmit(event){
 
   render();
   saveToLs();
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Thank you for your donation',
+    showConfirmButton: false,
+    timer: 2000
+  });
 
 
 }
@@ -147,6 +155,11 @@ function renderls(){
       unavalible.setAttribute('class','absImg');
       let div=document.getElementById(`item${i}`);
       div.appendChild(unavalible);
+      but=document.createElement('button');
+      but.setAttribute('id',`btn${counter}`);
+      Di.appendChild(but);
+      but.textContent='Book It!';
+      but.style.visibility='hidden';
     }
     counter++;
     but.addEventListener('click',handlebutton);
@@ -165,29 +178,32 @@ function itemForm(){
   formForItem=document.createElement('form');
   formForItem.setAttribute('id','form2');
   secForm2.appendChild(formForItem);
-  fieldset=document.createElement('fieldset');
-  formForItem.appendChild(fieldset);
+  let h3=document.createElement('h3');
+  h3.textContent='Coustmer Information';
+  formForItem.appendChild(h3);
+  //fieldset=document.createElement('fieldset');
+  //formForItem.appendChild(fieldset);
 
-  let legend=document.createElement('legend');
-  fieldset.appendChild(legend);
-  legend.textContent='Enter Your Info :';
+  //let legend=document.createElement('legend');
+  //fieldset.appendChild(legend);
+  //legend.textContent='Enter Your Info :';
 
   let nameLabel=document.createElement('label');
-  fieldset.appendChild(nameLabel);
+  formForItem.appendChild(nameLabel);
   nameLabel.textContent='Name';
   nameLabel.setAttribute('for','customername');
   let input1=document.createElement('input');
   input1.setAttribute('type','text');
   input1.setAttribute('id','customername');
   input1.setAttribute('required','text');
-  fieldset.appendChild(input1);
+  formForItem.appendChild(input1);
 
   let nameLabe2=document.createElement('label');
-  fieldset.appendChild(nameLabe2);
+  formForItem.appendChild(nameLabe2);
   nameLabe2.textContent='Contact';
   nameLabe2.setAttribute('for','customercontact');
   let input2=document.createElement('input');
-  fieldset.appendChild(input2);
+  formForItem.appendChild(input2);
   input2.setAttribute('type','text');
   input2.setAttribute('id','customercontact');
   input2.setAttribute('required','text');
@@ -195,11 +211,13 @@ function itemForm(){
   submitBook.setAttribute('id','submitBook');
   submitBook.setAttribute('type','submit');
   submitBook.textContent='Submit';
-  fieldset.appendChild(submitBook);
+  formForItem.appendChild(submitBook);
   let cancelBtn=document.createElement('button');
   cancelBtn.setAttribute('onClick','cancelForm()');
-  cancelBtn.textContent='Cancel';
-  fieldset.appendChild(cancelBtn);
+  cancelBtn.setAttribute('id','cancleBtn');
+
+  cancelBtn.textContent='X';
+  formForItem.appendChild(cancelBtn);
   formForItem.addEventListener('submit',handleBook);
 
 }
@@ -207,15 +225,19 @@ function itemForm(){
 
 function handleBook(event){
   event.preventDefault();
+
   unPic(divIdNumber);
   let userName=event.target.customername.value;
   let contactInfo=event.target.customercontact.value;
   new Custinfo(userName,contactInfo,divIdNumber);
   saveToLsCust();
+  closeForm();
   formForItem.remove();
 }
 function handlebutton(event){
   event.preventDefault();
+  openForm();
+
   divIdNumber= event.target.id;
   divIdName=divIdNumber;
   divIdNumber=getNumberFromString(divIdNumber);
@@ -224,7 +246,8 @@ function handlebutton(event){
     itemForm();
     Donation.allItems[divIdNumber].value++;
     let myobj = document.getElementById(divIdName);
-    myobj.remove();
+    console.log(myobj);
+    myobj.style.visibility='hidden';
     saveToLs();
   }
 }
@@ -246,17 +269,21 @@ function unPic(indexOf){
 }
 
 function cancelForm(){
+  closeForm();
   formForItem.remove();
   repeatBookIt(divIdNumber);
 }
 gettingOrderFromLs1();
 
 function repeatBookIt(divIdNumber) {
-  but=document.createElement('button');
-  but.setAttribute('id',`btn${divIdNumber}`);
-  let theDiv=document.getElementById(`item${divIdNumber}`);
-  theDiv.appendChild(but);
-  but.textContent='Book It!';
+  // but=document.createElement('button');
+  // but.setAttribute('id',`btn${divIdNumber}`);
+  // let theDiv=document.getElementById(`item${divIdNumber}`);
+  // theDiv.appendChild(but);
+  // but.textContent='Book It!';
+  but = document.getElementById(divIdName);
+  console.log(but);
+  but.style.visibility='visible';
   but.addEventListener('click',handlebutton);
   Donation.allItems[divIdNumber].value--;
   saveToLs();
@@ -283,4 +310,11 @@ function gettingOrderFromLs1(){
   if(order !== null){
     Custinfo.allItems = order;
   }
+}
+
+function openForm() {
+  document.getElementById('sec-form2').style.display = 'block';
+}
+function closeForm() {
+  document.getElementById('sec-form2').style.display = 'none';
 }

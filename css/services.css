@@ -12,18 +12,14 @@ header{
     background-color: #114E60;
     position: fixed;
     width: 100%;
-    height: 67px;
     overflow: hidden;
     z-index:5;
     top: 0px;
-}
-header img{
-    margin: 10px 0 0 20px;
-}
-#headlist a.active {
-    background-color: rgb(244, 247, 250);
-  }
-  
+} 
+ header img{
+    margin-left: 5px;
+} 
+
 #headlist{
  position: relative;
  display:block;
@@ -38,25 +34,25 @@ header img{
     color:#95b0b6;
     padding: 20px;
 }
-a:hover{
-    background-color:white;
-    transition-duration: .4s;
-    font-size: 25px;
-}
+
 aside{
-    top: 67px;
+    top: 74px;
     float: left;
     width: 20%;
     height: 89vh;
     position:fixed;
-    background-color:#95b0b6;
+    background-color:#95b0b654;
     z-index: 5;
     color: #114E60;
     padding-left: 10px;
+   
 }
 #right img{
-    border-radius: 50%;
+    position:absolute;
+    /* border-radius: 40%; */
     float: left;
+    top: 9px;
+    left: 20px;
 }
 #right div{
     margin-bottom: 10px;
@@ -66,8 +62,13 @@ aside{
     position: relative;
 }
 #right div h5{
-display: inline;
-padding-top: 30px;
+position: absolute;
+display: inline-block;
+padding-left: 70px;
+font-size: 18px;
+/* padding-bottom: 6px; */
+
+
 
 }
 #left{
@@ -88,10 +89,9 @@ padding-top: 30px;
 
 }
 aside div:hover{
-    background-color: rgb(54, 99, 93);
-    color: cornsilk;
-    border-radius: 23px;
-    transform: translateX(40px);
+    background-color: #b1c4ca;
+    color: #114E60;
+    border-radius: 10px;
 }
 aside button{
     padding: auto;
@@ -115,9 +115,9 @@ aside button{
   animation: bounce 1.5s infinite;
 }
 #left input ,#left textarea {
-    background-color: #ebebeb;
-    color: #114E60;
-    display: block;
+  background-color: #ebebeb;
+  color: #f8f5f1;
+  display: block;
   margin: 2px auto;
   min-width: 300px;
   padding: 10px;
@@ -125,12 +125,24 @@ aside button{
   border: none;
   transition: all 0.5s ease 0s;
 }
-#left input:hover {
-    border-bottom: 5px solid #114E60;
-    height: 30px;
-    width: 360px;
-    transition: ease 0.5s;
+
+#left input:last-child {
+
+    color:#114E60;
+    font-size: large;
+    border-radius: 10px;
+
 }
+#askSubmit:hover {
+    color: #f8f5f1;
+    background-color: #8bafbe;
+    cursor: pointer;
+    border-radius: 10px;
+
+    transform: scale(0.977);
+    transition-duration: 0.2s;
+}
+
 #left textarea{
     background-color: #ebebeb;
     overflow: hidden;
@@ -138,7 +150,7 @@ aside button{
 }
   
 #left textarea:hover {
-    border-bottom: 5px solid #114E60;
+    border-bottom: 5px solid #f8f5f1;
     height: 6em;
     width: 380px;
     transition: ease 0.5s;
@@ -223,4 +235,25 @@ aside button{
     background-color: rgb(177, 104, 104);
     transition: 0.3s;
     color: #ebebeb;
+}
+#joinHere{
+        position: absolute;
+        background-color: #ebebeb;
+       width: 170px;
+        height: 40px;
+        left: 210%;
+        border-radius: 10px;
+        font-size: large;
+        border:0;
+        font-family: 'Times New Roman', Times, serif;
+        color: #022D3A;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-ser;
+     
+}
+#joinHere:hover{
+    background-color: #8bafbe;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: scale(0.977);
+    transition-duration: 0.2s;
 }

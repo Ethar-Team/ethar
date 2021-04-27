@@ -1,9 +1,11 @@
-
+*{
+    box-sizing: border-box;
+}
 header{
     background-color: #114E60;
     position: fixed;
     width: 100%;
-    /* overflow: hidden; */
+    
     z-index:1;
 }
 /* header nav #headlist a.active{
@@ -12,16 +14,16 @@ header{
 header img{
     margin-left: 5px;
 }
-#headlist a.active {
-    background-color: rgb(244, 247, 250);
-  }
+
+#logo{
+    text-decoration: none;
+}
   
 #headlist{
- position: relative;
-display:block;
+position: relative;
 right: 50px ;
 float:right;
-margin-top: 20px;
+margin-top: 28px;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
@@ -29,9 +31,10 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
     text-decoration: none;
     color:#95b0b6;
     padding: 20px;
+    /* padding-bottom: 0px;
+    padding-top:0px; */
 }
-  a:hover{
-    background-color:white;
-    transition-duration: .4s;
-    font-size: 25px;
+  #headlist a:hover  {
+  transition-duration: .4s;
+  font-size:25px ;
 }

@@ -1,4 +1,4 @@
-'use script';
+'use strict';
 let container =document.getElementById('secone');
 // let linkToScroll=document.getElementsByClassName('imgs');
 let showEl = document.getElementById('sectwo');
@@ -24,10 +24,8 @@ new About('Ayyoub Alkeyyam','I graduated from Yarmouk University with a major in
 new About ('Shatha Alsmadi','I graduated from Hashemite University with a major in Software Engineering.','https://www.linkedin.com/in/shatha-al-smadi-5348021ab/','https://github.com/shathasmadi','/images/Shatha.jpg');
 new About ('Roaa Mustafa','I graduated from Al-Balqa University with a major in Telecommunication Engineering.','https://www.linkedin.com/in/roaa-mustafa98/','https://github.com/RoaaMustafa','/images/Roaa.jpg');
 new About ('Anas Abu-Galiha','I graduated from Tafila Technical University with a major in Civil Engineering.','https://www.linkedin.com/in/anas-abughalieh-68b73a194/','https://github.com/AnasAGc','/images/Anas.jpg');
-new About ('Abdullah Elian','I graduated from the University of Jordan with a major in Computer Science','http://www.linkedin.com/in/abdullah-elian','https://github.com/AbdullahElian1','/images/Abduulah.jpg');
-new About('Mohammad Hayagneh ','I graduated from Yarmouk University  with a major in Electrical engineering','https://www.linkedin.com/in/mohammad-hayajneh-2ab099124/','https://github.com/mohammadhayajneh2014','/images/Mohamme.jpg');
-new About('Aysheh Abu mahfouz','text','https://www.linkedin.com/in/aysheh-mahfouz-28a48a20b/','https://github.com/Aysheh-Mahfouz','/images/Aysheh.jpg');
-
+new About ('Abdullah Elian','I graduated from the University of Jordan with a major in Computer Science','http://www.linkedin.com/in/abdullah-elian','https://github.com/AbdullahElian1','/images/Abdullah.jpg');
+new About('Mohammad Hayagneh ','I graduated from Yarmouk University  with a major in Electrical engineering','https://www.linkedin.com/in/mohammad-hayajneh-2ab099124/','https://github.com/mohammadhayajneh2014','/images/Mohammed.jpg');
 function renderImg(index){
   // let linkToScroll = document.createElement('a');
   // linkToScroll.setAttribute('href','#sectwo');
@@ -95,12 +93,14 @@ function handleClicking(event) {
       showText.innerHTML='';
       renderImg(5);
       renderText(5);
-    }else if(event.target.id ==='aysheh'){
-      showEl.innerHTML='';
-      showText.innerHTML='';
-      renderImg(6);
-      renderText(6);
-    } else{
+    }
+    // else if(event.target.id ==='aysheh'){
+    //   showEl.innerHTML='';
+    //   showText.innerHTML='';
+    //   renderImg(6);
+    //   renderText(6);
+    // }
+    else{
       showEl.innerHTML='';
       showText.innerHTML='';
     }
@@ -109,4 +109,3 @@ function handleClicking(event) {
     container.removeEventListener('click',handleClicking);
   }
 }
-
