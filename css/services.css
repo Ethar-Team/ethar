@@ -177,11 +177,12 @@ aside button{
     position: relative;
 }
 #sectionTwo2 fieldset{
-    /* background-color: #d9dcdd; */
     background-color:rgb(222, 230, 236);
     height: 160%;
     width: 98%;
-    /* color:#114E60; */
+    border:2px solid #114E60;
+    box-shadow:5px 10px 18px #083341;
+    
 }
 #sectionTwo2 legend{
     text-align: center;
@@ -210,6 +211,7 @@ aside button{
     margin-left: auto;
     margin-right: auto;
     color:black;
+    border:2px solid #114E60;
 }
 
 
