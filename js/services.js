@@ -1,8 +1,10 @@
+/* eslint-disable no-undef */
 /* eslint-disable indent */
 /* eslint-disable no-unused-vars */
 'use sttict ';
 
 let serviceImage=document.getElementById('imageService');
+
 // let image =document.getElementsByClassName('catg');
 // let x;
 
@@ -187,10 +189,9 @@ function formBox (event){
     showConfirmButton: false,
     timer: 3000
   });
-  // serviceImage.style.display='block';
-  // x.style.display='none';
-  // console.log(x);
-  // x.remove();
+  serviceImage.style.display='block';
+  formSection.style.display='none';
+
 }
 
 
@@ -327,6 +328,8 @@ function callrenderOfJoin(event){
 
   //console.log('joinhere'+event);
   but.removeEventListener('click',callrenderOfJoin);
+
+  
 }
 
 let name1;
@@ -350,6 +353,14 @@ function handleSubmit(event){
   closeForm();
   divForForm.remove();
   but.addEventListener('click',callrenderOfJoin);
+
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Thanks for Join Us ',
+    showConfirmButton: false,
+    timer: 2000
+  });
 }
 
 
@@ -395,4 +406,7 @@ function cancelform (event){
 
 function removeImage(){
   serviceImage.style.display='none';
+}
+function randerimag (){
+
 }
