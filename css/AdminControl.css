@@ -22,6 +22,7 @@ main{
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 40%;
+    box-shadow: 5px 10px 18px #114d608c ;
 }
 th,td{
     padding: 8px;
@@ -46,12 +47,14 @@ th {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 40%;
+    box-shadow: 5px 10px 18px #114d608c ;
 }
 #tableForService{
     margin-left: 30%;
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 40%;
+    box-shadow: 5px 10px 18px #114d608c ;
 }
 main h1{
   text-align:center; 
