@@ -4,7 +4,7 @@ body{
     width: 100%;
     background-color: rgb(222, 230, 236);
 }
-#secone img:not(.link){
+/* #secone img:not(.link){
     position: relative;
     top: 30%;
     left: 5%;
@@ -14,8 +14,15 @@ body{
     border-radius: 50%;
     cursor: pointer;
 
+} */
+#secone .eachone .imgs{
+  position: relative; 
+  border-radius: 50%;
+  cursor: pointer;
+  width: 25%;
+  left:2%;
 }
-.imgs:hover {
+#secone .eachone .imgs:hover {
     opacity: 0.5;
     image-resolution: auto;
 }
@@ -78,22 +85,28 @@ width: 80%;
 padding: 20px;
 text-align: center;
 }
-.contentBx h3{margin: 20px 0 10px;
+#secone{
+float:left;
+width:40%;
+}
+#secone .eachone.contentBx h3{
+/* margin: 20px 0 10px; */
 letter-spacing: 2px;
 color: #05314e;
 text-transform: uppercase;
 font-weight: 500;
 font-size: 15px;
 font-weight: bold;
-margin-left:9%;
+margin-left:6%;
+margin-top: 0%;
 /* text-align: center; */
 }
-.eachOne{
- filter: grayscale(100%);
+.eachone .imgs{
+  filter: grayscale(0%);
   transform: translateY(20px);
   transition: 0.5s;
 }
-.eachOne:hover{
-    filter: grayscale(0%);
+.eachone .imgs:hover{
+    filter: grayscale(100%);
     transform: translateY(0);
 }
