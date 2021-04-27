@@ -1,8 +1,7 @@
 body{
     margin: 0px;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(222, 230, 236);
+    
+    
 }
 #secone img:not(.link){
     position: relative;
