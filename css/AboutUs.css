@@ -76,3 +76,15 @@ width: 80%;
 padding: 20px;
 text-align: center;
 }
+.imgs{
+    transform: translateY(20px);
+    transition: 0.5s;
+  }
+.imgs:hover{
+      transform: translateY(0);
+      transition: 0.5s;
+  }
+  .link:hover{
+    transform: translateY(-5px);
+    transition: 0.5s;
+  }
