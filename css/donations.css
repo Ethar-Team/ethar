@@ -4,14 +4,15 @@
 body{
     margin: 0;
     /* height: 100vh; */
+    background-color: rgb(222, 230, 236);
+
 }
 
 
 #display-sec{
     
     padding: 4%;
-     background-color: #eee;
-     margin: 0% ; 
+    background-color: white;
      justify-content: center;
      align-items: center;
      width: 100%;
@@ -30,21 +31,23 @@ body{
     border-radius: 10%;
     position: relative;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
-    background-color:  #93edc7;
+    background-color: #ffffff;
+    border: 2px solid black;
+
    
 }
 
 .absImg{
-    /* position: absolute;
-    top: 12%;
-    left: 0;
-    transform: rotate(-30deg);
-    opacity: 0.5; */
     position: absolute;
+    top: 5%;
+    left: 0;
+    transform: rotate(-10deg);
+    opacity: 0.5;
+    /* position: absolute;
     top: 48%;
     left: 0;
     transform: rotate(-9deg);
-    opacity: 0.7;
+    opacity: 0.7; */
 }
 
 .items h4,p{
@@ -65,46 +68,58 @@ body{
     width: 51%;
     height: 47px;
     font-size: 1rem;
-    background-color: rgb(134, 167, 240);
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: -3%;
-    border-radius: 50%;
+    border-radius: 30px;
     cursor: pointer;
+    color: white;
+    background-color: rgb(37 45 52);
+    border: none;
+    font-weight: bold;
 }
 
 .items button:hover{
-    background-color: rgb(38, 192, 133);
+    color: black;
+    background-color: #95B0B6;
     transition-duration: .3s;
 
 }
+
+    
+
 #form-sec{
-    padding-top: 74px;
+   padding-top: 74px;
     position: relative;
 }
 
 #form-sec img{
     width: 100%;
-    height: 800px;
+    height: 550px;
+    /* backdrop-filter: blur(px); */
     
  }
 #form1{
          position: absolute; 
-         width: 35%;
+         width: 25%;
           margin: 20px auto;
-          top:17%;
-          right: 4%;
-          background-color: #bcafaf73;
-          border-radius: 10px;
-          
+          top:15%;
+          right: 7%;
+          background-color: #114e604f;;
+          border-radius: 43px;
+          backdrop-filter: blur(4px);
 }
 #form1 label{
     display: block;
+    margin-bottom:2% ;
+    font-size:larger;
+    font-weight:800;
 }
 
 #form1 input,select,textarea{
         padding: 12px;
+        
           margin-bottom: 10px;
           width: 100%;
           border: 2px solid rgb(69, 69, 107);
@@ -117,7 +132,9 @@ body{
         height: 40px;
         margin-left: 29%;
         cursor: pointer;
-        background: #15301459;
+        background:white;
+        font-size: larger;
+        font-weight: 700;
     
         
         font-size:large;
@@ -131,7 +148,7 @@ body{
         text-shadow:none;
     }
     #form1 button:hover{
-    background: #4d618d;
+    background: #c69e4acf;;
     
     color: #fff;
     
@@ -142,16 +159,18 @@ body{
     
     text-shadow:none;}
 #form1 legend{
-    margin-bottom: 2%;
+    margin-bottom: 1%;
     font-size: 2rem;
-    color: #1e3824;
+    color: black;
     text-align: center;
     font-weight: bold;
+    
 }
-#form1 fieldset{
+
+ #form1 fieldset{
     border:none;
 
-}
+} 
   
 
     
@@ -159,11 +178,13 @@ body{
         position: relative;
          border-radius: 10px;
          
-        height: 400px;
-        width: 51%;
+        height: 370px;
+        width: 22%;
        margin: 14% auto;
-       background-color: #8BD976;
-       padding:1%
+       background-color: #281d1dc7;
+       padding:1%;
+       color:white;
+       box-shadow:5px 10px 18px rgb(77 66 66);
        
        
     }
@@ -180,16 +201,22 @@ body{
     border-radius: 25px;
 }
 
+#form2 input,select,textarea:active{
+    border:none;
+    
+}
+
 #form2 #submitBook {
     width: 38%;
     height: 40px;
     margin-left: 29%;
     cursor: pointer;
     display: inline-block;
-    background: rgb(111, 165, 111);
+    background: white;
     margin-top:6%;
 
-    color: #ba506d;
+    color: #000000;
+    font-weight: bold;
     font-size:large;
     
     border: 2px solid #eee;
@@ -200,22 +227,20 @@ body{
     text-shadow:none;
 }
 #form2 #submitBook:hover{
-    background: #016ABC;
-    
-    color: #fff;
-    
-    border: 1px solid #eee;
-    
-    border-radius: 20px;
-    
-    
-    text-shadow:none;
-    } 
+    /* background-color: #016ABC; */
+    transform: scale(1.1);
+     border: none;
+    text-shadow:none; 
+    }  
+
+    #form2 #submitBook:active{
+        border:none;
+    }
 
 #form2 #cancleBtn{
     position: absolute;
     background-color:#ba506c00 ;
-    color:#ba506d;
+    color:white;
     border:none;
     font-size: x-large;
     width: 7%;
@@ -231,16 +256,16 @@ body{
 
  #form2 #cancleBtn:hover{
     transform: scale(1.4);
-    background-color: #ba506d;
-     border-radius: 100%; 
-     color:black;
+    /* background-color: white;
+     border-radius: 30px;  */
+     color:white;
 
      
 }
 
 #form2 h3 {
     text-align: left;
-    color: #ba506d;
+    color: white;
     font-size: x-large;
 }
 #form2 label{
