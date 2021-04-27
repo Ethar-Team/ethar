@@ -262,7 +262,7 @@ function renderOfJoin(){
   but2 =document.createElement('button');
   but2.setAttribute('type','submit');
   but2.setAttribute('id','submitAndFinish');
-  but2.textContent='submit';
+  but2.textContent='Submit';
   field.appendChild(but2);
   formJoin.addEventListener('submit',handleSubmit);
 
@@ -351,13 +351,7 @@ gittingWorkerFromLocalStorage();
 
 getInfo();
 
-// let translate= Document.getElementById('google_translate_element');
-// translate.setAttribute('type','text/javascript');
 
-// type="text/javascript"
-// function googleTranslateElementInit() {
-//   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-// }
 
 
 function openForm() {
