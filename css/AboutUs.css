@@ -52,12 +52,10 @@ main h1{
 }
 #secthree h5{
     position:relative;
-   left:200px;
    font-size: large;
 }
 #secthree p,#secthree a{
     position: relative;
-    left: 200px;
 }
 #hero{
     filter: blur(4px);
@@ -72,9 +70,35 @@ font-size: x-large;
 font-weight: bold;
 /* border: 3px solid #F1F1F1; */
 margin-left: -90%;
-top:5%;
+top: 9%;
 position: absolute;
 width: 80%;
 padding: 20px;
 text-align: center;
+}
+.imgs{
+    transform: translateY(20px);
+    transition: 0.5s;
+  }
+.imgs:hover{
+      transform: translateY(0);
+      transition: 0.5s;
+  }
+  .link:hover{
+    transform: translateY(-5px);
+    transition: 0.5s;
+  }
+  #secthree{
+      float:right;
+      width: 40%;
+      margin-right: 20%;
+      margin-top: 7%;
+      text-align: center;
+      color: #ffffff;
+      background-color: #5e879b8a;
+      border-radius: 26px;
+  }
+#sectwo .imageLarge{
+    border-radius: 10px;
+    height: 300px;
 }

@@ -28,6 +28,7 @@ function renderImg(index){
   imgEl.setAttribute('id','img');
   imgEl.setAttribute('src',`${About.allPeople[index].imgUrl}`);
   showEl.appendChild(imgEl);
+  imgEl.setAttribute('class','imageLarge');
 }
 
 let divForText=document.createElement('div');;
