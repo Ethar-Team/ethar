@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 'use strict';
 
@@ -65,7 +66,7 @@ function handleSubmit(event){
   Swal.fire({
     position: 'center',
     icon: 'success',
-    title: 'You are good person',
+    title: 'Thank you for your donation',
     showConfirmButton: false,
     timer: 2000
   });

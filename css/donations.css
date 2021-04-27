@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
 *:not(.items button){
     box-sizing: border-box;
 }
@@ -5,10 +6,13 @@ body{
     margin: 0;
     /* height: 100vh; */
     background-color: rgb(222, 230, 236);
-
 }
-
-
+body p{
+    font-family: 'Work Sans', sans-serif;
+}
+body h1,h2,h3,h4,h5,h6,a{
+    font-family: 'Noto Serif', serif;
+}
 #display-sec{
     
     padding: 4%;
@@ -105,7 +109,7 @@ body{
          width: 25%;
           margin: 20px auto;
           top:15%;
-          right: 7%;
+          right:4%;
           background-color: #114e604f;;
           border-radius: 43px;
           backdrop-filter: blur(4px);
