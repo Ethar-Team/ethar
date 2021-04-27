@@ -1,3 +1,5 @@
+/* eslint-disable eol-last */
+/* eslint-disable no-trailing-spaces */
 /* eslint-disable no-undef */
 /* eslint-disable indent */
 /* eslint-disable no-unused-vars */

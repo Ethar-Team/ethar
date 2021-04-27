@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
 *{
     box-sizing: border-box;
 }
@@ -5,8 +6,12 @@ body{
     margin: 0;
     height: 100vh;
     background-color: white;
-
-
+}
+body p{
+    font-family: 'Work Sans', sans-serif;
+}
+body h1,h2,h3,h4,h5,h6,a{
+    font-family: 'Noto Serif', serif;
 }
 header{
     background-color: #114E60;
@@ -26,15 +31,8 @@ header{
  right: 50px ;
  float:right;
  margin-top: 20px;
- font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
-/* #headlist a{
-    text-decoration: none;
-    color:white;
-    padding: 20px;
-} */
-
 aside{
     top: 74px;
     float: left;
@@ -256,10 +254,9 @@ aside button{
         border-radius: 10px;
         font-size: large;
         border:0;
-        font-family: 'Times New Roman', Times, serif;
         color: white;
         font-weight: 600;
-        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-ser;
+        
      
 }
 #joinHere:hover{
@@ -281,7 +278,5 @@ aside button{
     top:64%;
     font-size: xx-large;
     color: black;
-    text-align:justify;
-    left: 11%;
-    right: 20%;
+    text-align:center;
 }
