@@ -2,7 +2,7 @@ body{
     margin: 0px;
     height: 100%;
     width: 100%;
-    background-color: rgb(222, 230, 236);
+    background-color: #95b0b654;
 }
 /* #secone img:not(.link){
     position: relative;
@@ -32,10 +32,11 @@ body{
     padding-left:20px;
 } */
 #sectwo{
-    float: right;
-    margin-right: 30%;
-    padding-top: 30px; 
-    width:30%;
+     float: right;
+    margin-right: 20%;
+    padding-top: 122px;
+    width: 35%;
+    height: 40%;
 }
 main{
     position: relative;
@@ -49,17 +50,25 @@ main h1{
 }
 #sectwo img{
     height: 400px;
+    border-radius: 7%;
+    /* margin-right: 10%; */
 }
 .link{
     position: relative;
     height: 20px;  
     padding-left: 10px;
+    filter: grayscale(0%);
+    /* transform: translateY(20px); */
+}
+.link:hover{
+    transform:translateY(10px);
+    transition:0.7s;
 }
 #secthree {
     float: right;
-    margin-right: 44%;
-    padding-top: 30px; 
-    width:30%;
+    margin-right: 38%;
+    padding-top: 36px;
+    width: 30%;
     /* width: 70%; */
 }
 #secthree h5{
@@ -93,7 +102,8 @@ text-align: center;
 #secone{
 float:left;
 width:25%;
-background-color: #05314e46;
+background-color: #8bafbe7a;
+margin-top: -1%;
 }
 h3{
     display: block;
@@ -129,15 +139,22 @@ margin-top: 0%; */
     filter: grayscale(100%);
     transform: translateY(0);
 }
-#secone::-webkit-scrollbar {
-        width: 10px;
-}
-#secone::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-#secone::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-  #secone::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+
+/* .overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    /* color: #f1f1f1;  */ 
+    /* width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  } */
+  
+  /* #sectwo:hover .overlay {
+    opacity: 1;
+  } */

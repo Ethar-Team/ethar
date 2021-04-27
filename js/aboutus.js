@@ -28,11 +28,12 @@ new About ('Abdullah Elian','I graduated from the University of Jordan with a ma
 new About('Mohammad Hayagneh ','I graduated from Yarmouk University  with a major in Electrical engineering','https://www.linkedin.com/in/mohammad-hayajneh-2ab099124/','https://github.com/mohammadhayajneh2014','/images/Mohammed.jpg');
 function renderImg(index){
   // let linkToScroll = document.createElement('a');
-  // linkToScroll.setAttribute('href','#sectwo');
-  // containerImg.appendChild()
+  // linkToScroll.setAttribute('href','.imageLarge');
+  // containerImg.appendChild(linkToScroll);
   let imgEl= document.createElement('img');
   imgEl.setAttribute('src',`${About.allPeople[index].imgUrl}`);
   showEl.appendChild(imgEl);
+  imgEl.setAttribute('class','imageLarge');
 }
 function renderText(index){
   let nameEl=document.createElement('h5');
