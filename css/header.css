@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 header{
-    background-color: #114E60;
+    background-color: #000000;
     position: fixed;
     width: 100%;
     
@@ -12,7 +12,7 @@ header{
     background-color: white;
 } */
 header img{
-    margin-left: 5px;
+    margin-left: 13px;
 }
 
 #logo{
@@ -29,7 +29,14 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 }
 #headlist a{
     text-decoration: none;
-    color:#95b0b6;
+    color:white;
     padding: 20px;
+    /* padding-bottom: 0px;
+    padding-top:0px; */
+}
+  #headlist a:hover  {
+      transition: 0.4s;
+  color: rgb(172, 154, 189);
+  
 }
   
