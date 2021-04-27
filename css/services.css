@@ -89,9 +89,9 @@ font-size: 18px;
 
 }
 aside div:hover{
-    background-color: #b1c4ca;
-    color: #114E60;
-    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius:15px 0px 0px 15px ;
 }
 aside button{
     padding: auto;
