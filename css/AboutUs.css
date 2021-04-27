@@ -45,7 +45,7 @@ main h1{
     font-family: 'Anton', sans-serif;
     text-align: center;
     font-size: 40px;
-    color: #073c55;
+    color: #073C55;
 }
 #sectwo img{
     height: 400px;
@@ -82,7 +82,7 @@ color:#ffffff;
 font-family: 'Times New Roman', Times, serif;
 font-size: x-large;
 font-weight: bold;
-/* border: 3px solid #f1f1f1; */
+/* border: 3px solid #F1F1F1; */
 margin-left: -90%;
 top:5%;
 position: absolute;

@@ -2,12 +2,6 @@
 'use sttict ';
 
 
-
-//  type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-
-
-/////     Function Construction
-
 let array=[];
 function AskForHelp (names,countatNumber,description){
 
@@ -19,6 +13,8 @@ function AskForHelp (names,countatNumber,description){
 }
 
 
+
+
 let arrayOfServices=[];
 function Servies (name,paragraph){
   this.name=name;
@@ -27,7 +23,7 @@ function Servies (name,paragraph){
 
 }
 
-let building= new Servies('building','Designing or maintaining air conditioning, elevators, and other mechanical systems, distributing electricity and water supply, providing lighting and heating. ');
+let building= new Servies('building','designing or maintaining air conditioning, elevators and other mechanical systems,distributing electricity and water supply,providing lighting and heating.');
 let teaching= new Servies('teaching','We provide specialist teaching services to support children and young people with a variety of special educational needs and disabilities. We provide our specialist teaching services across all education settings, secondary, primary, mainstream, specialist and early years.');
 let carpentry= new Servies('carpenting','Measuring, marking up, cutting, shaping, fitting and finishing timber,Using a range of hand and power tools,Installing floor joists, floorboards, roof trusses and wall partitions,Fitting interiors such as staircases, doors, skirting boards, cupboards and kitchens,Putting up frames for bridges, roads, dams and buildings,Drawing and working with technical drawings,Working in residential or commercial buildings,Restoring buildings,Working in a workshop, a client’s business or home, or on a construction site,Carrying out jobs in dusty conditions or working outdoors in all weather and at height.');
 let plumbing=new Servies('plumbing','Install pipes and plumbing fixtures. Visually inspect equipment and operate test equipment such as pressure and vacuum gauges to determine the cause and location of trouble. Clear obstructions from sink drains and toilets, Troubleshoot problems and decide how to fix them. Repair pipes and plumbing fixtures,Do installations and repairs.Present recommendations to people.');
@@ -37,7 +33,7 @@ let electric=new Servies('electric','Generation and Power Supply,Transmission an
 
 
 
-
+let popUpForm=document.getElementById('sectionTwo2');
 /////    Rendering Functions
 
 
@@ -111,8 +107,7 @@ function formRander(){
   fieldset.appendChild(nameLabel);
   nameLabel.textContent='Name';
   nameLabel.setAttribute('for','customername');
-  let br0=document.createElement('br');
-  fieldset.appendChild(br0);
+
   let input1=document.createElement('input');
   input1.required;
   fieldset.appendChild(input1);
@@ -120,7 +115,6 @@ function formRander(){
   input1.setAttribute('id','customername');
   input1.setAttribute('required','text');
   let br1=document.createElement('br');
-  fieldset.appendChild(br1);
 
 
   let nameLabe2=document.createElement('label');
@@ -134,8 +128,6 @@ function formRander(){
   input2.setAttribute('required','text');
 
   let br2=document.createElement('br');
-  fieldset.appendChild(br2);
-
 
 
   let nameLabe3=document.createElement('label');
@@ -149,13 +141,12 @@ function formRander(){
   input3.setAttribute('required','text');
 
   let br3=document.createElement('br');
-  fieldset.appendChild(br3);
-
 
   let submit=document.createElement('input');
   fieldset.appendChild(submit);
   submit.setAttribute('type','submit');
   submit.setAttribute('value', 'Submit');
+  submit.setAttribute('id','askSubmit');
 
 }
 
@@ -218,24 +209,25 @@ function getInfo(){
 let but2;
 let formJoin;
 let but3 ;
-let divDiv;
-
+let divForForm;
+let formEl;
 //let sectionOne=document.getElementById('sec-one');
 let sectionTwo=document.getElementById('sectionTwo2');
 function renderOfJoin(){
-  divDiv = document.createElement('div');
-  sectionTwo.appendChild(divDiv);
+  divForForm = document.createElement('div');
+  divForForm.setAttribute('id','divForForme');
+  sectionTwo.appendChild(divForForm);
 
-  formJoin =document.createElement('Form');
+  formJoin=document.createElement('form');
   formJoin.setAttribute('id','form1');
-  divDiv.appendChild(formJoin);
+  divForForm.appendChild(formJoin);
 
   let field =document.createElement('fieldset');
   formJoin.appendChild(field);
 
   let lega = document.createElement('legend');
   field.appendChild(lega);
-  lega.textContent='Join zone';
+  lega.textContent='Join Form';
 
   let lab11 =document.createElement('label');
   lab11.setAttribute('for','inp11');
@@ -273,13 +265,12 @@ function renderOfJoin(){
   but2.textContent='submit';
   field.appendChild(but2);
   formJoin.addEventListener('submit',handleSubmit);
-  //but2.addEventListener('submit',handleSubmit);
 
-
+  formEl=formJoin;
   but3 =document.createElement('button');
   but3.setAttribute('type','click');
-  but3.setAttribute('id','EXit');
-  but3.textContent='Cancel';
+  but3.setAttribute('id','cancel');
+  but3.textContent='X';
   field.appendChild(but3);
   but3.addEventListener('click',removejoin);
 
@@ -287,7 +278,8 @@ function renderOfJoin(){
 
 function removejoin(event) {
   event.preventDefault();
-  divDiv.remove();
+  closeForm();
+  divForForm.remove();
   but.addEventListener('click',callrenderOfJoin);
 }
 
@@ -308,7 +300,6 @@ function gittingWorkerFromLocalStorage() {
   if (order !==null){
     JoinUs.FormArray=order;
   }
-  console.log(JoinUs.FormArray);
 
 }
 let but=document.getElementById('joinHere');
@@ -317,6 +308,7 @@ but.addEventListener('click',callrenderOfJoin);
 
 function callrenderOfJoin(event){
   event.preventDefault();
+  openForm();
   renderOfJoin();
 
   //console.log('joinhere'+event);
@@ -332,7 +324,6 @@ function handleSubmit(event){
   console.log(event);
 
   name1=event.target.inp11.value;
-  //console.log(name1);
   profession=event.target.inp12.value;
   contnum=event.target.inp13.value;
 
@@ -342,6 +333,9 @@ function handleSubmit(event){
   //  formJoin.removeEventListener('submit',callrenderOfJoin);
   saveworker();
   console.log(JoinUs.FormArray);
+  closeForm();
+  divForForm.remove();
+  but.addEventListener('click',callrenderOfJoin);
 }
 
 
@@ -366,3 +360,27 @@ getInfo();
 // }
 
 
+function openForm() {
+  popUpForm.style.display = 'block';
+}
+
+function closeForm() {
+  popUpForm.style.display = 'none';
+}
+
+
+
+popUpForm.addEventListener('click',cancelform);
+function cancelform (event){
+  event.preventDefault();
+  popUpForm.removeEventListener('click',cancelform);
+
+  // console.log(event.path);
+  //the path of input [input#inp12, fieldset, form#form1, div, section#sectionTwo2, main, body, html, document, Window]
+  if (event.path.length<=8){
+    closeForm();
+    divForForm.remove();
+    but.addEventListener('click',callrenderOfJoin);
+    popUpForm.addEventListener('click',cancelform);
+  }
+}

@@ -1,4 +1,4 @@
-'use script';
+'use strict';
 let container =document.getElementById('secone');
 // let linkToScroll=document.getElementsByClassName('imgs');
 let showEl = document.getElementById('sectwo');
@@ -26,7 +26,6 @@ new About ('Roaa Mustafa','I graduated from Al-Balqa University with a major in 
 new About ('Anas Abu-Galiha','I graduated from Tafila Technical University with a major in Civil Engineering.','https://www.linkedin.com/in/anas-abughalieh-68b73a194/','https://github.com/AnasAGc','/images/Anas.jpg');
 new About ('Abdullah Elian','I graduated from the University of Jordan with a major in Computer Science','http://www.linkedin.com/in/abdullah-elian','https://github.com/AbdullahElian1','/images/Abdullah.jpg');
 new About('Mohammad Hayagneh ','I graduated from Yarmouk University  with a major in Electrical engineering','https://www.linkedin.com/in/mohammad-hayajneh-2ab099124/','https://github.com/mohammadhayajneh2014','/images/Mohammed.jpg');
-
 function renderImg(index){
   // let linkToScroll = document.createElement('a');
   // linkToScroll.setAttribute('href','#sectwo');
@@ -110,4 +109,3 @@ function handleClicking(event) {
     container.removeEventListener('click',handleClicking);
   }
 }
-
