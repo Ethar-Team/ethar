@@ -1,7 +1,11 @@
+/* eslint-disable indent */
 /* eslint-disable no-unused-vars */
 'use sttict ';
 
 let serviceImage=document.getElementById('imageService');
+// let image =document.getElementsByClassName('catg');
+// let x;
+
 let array=[];
 function AskForHelp (names,countatNumber,description){
 
@@ -51,6 +55,7 @@ function renderform (event){
   for (let i = 0; i < arrayOfServices.length; i++) {
 
     if(category===arrayOfServices[i].name){
+      // x=document.getElementById(category);
 
       index=i;
       rander ();
@@ -175,8 +180,17 @@ function formBox (event){
   // eslint-disable-next-line no-undef
   formSection.appendChild(massage);
   // eslint-disable-next-line no-undef
-  massage.textContent=' your request in progress ';
-
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'Your request in progress',
+    showConfirmButton: false,
+    timer: 3000
+  });
+  // serviceImage.style.display='block';
+  // x.style.display='none';
+  // console.log(x);
+  // x.remove();
 }
 
 
