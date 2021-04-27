@@ -31,10 +31,5 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
     text-decoration: none;
     color:#95b0b6;
     padding: 20px;
-    /* padding-bottom: 0px;
-    padding-top:0px; */
 }
-  #headlist a:hover  {
-  transition-duration: .4s;
-  font-size:25px ;
-}
+  
