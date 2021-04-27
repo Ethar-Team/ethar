@@ -7,7 +7,7 @@ function initSlideShow(slideshow) {
 
   let slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .slide`); // Get an array of slides
 
-  let index = 0, time = 6000;
+  let index = 0, time = 5000;
   slides[index].classList.add('active');
 
   setInterval( () => {
