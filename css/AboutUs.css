@@ -68,7 +68,7 @@ font-size: x-large;
 font-weight: bold;
 /* border: 3px solid #F1F1F1; */
 margin-left: -90%;
-top:5%;
+top: 9%;
 position: absolute;
 width: 80%;
 padding: 20px;
@@ -90,10 +90,11 @@ text-align: center;
       float:right;
       width: 40%;
       margin-right: 20%;
-      margin-top: 4%;
+      margin-top: 7%;
       text-align: center;
-      background-color: #073c552d;
-      border-radius: 20px;
+      color: #ffffff;
+      background-color: #5e879b8a;
+      border-radius: 26px;
   }
 #sectwo .imageLarge{
     border-radius: 10px;
