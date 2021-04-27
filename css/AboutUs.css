@@ -50,12 +50,10 @@ main h1{
 }
 #secthree h5{
     position:relative;
-   left:200px;
    font-size: large;
 }
 #secthree p,#secthree a{
     position: relative;
-    left: 200px;
 }
 #hero{
     filter: blur(4px);
@@ -88,3 +86,16 @@ text-align: center;
     transform: translateY(-5px);
     transition: 0.5s;
   }
+  #secthree{
+      float:right;
+      width: 40%;
+      margin-right: 20%;
+      margin-top: 4%;
+      text-align: center;
+      background-color: #073c552d;
+      border-radius: 20px;
+  }
+#sectwo .imageLarge{
+    border-radius: 10px;
+    height: 300px;
+}
