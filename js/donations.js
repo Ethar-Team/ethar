@@ -65,7 +65,7 @@ function handleSubmit(event){
   Swal.fire({
     position: 'center',
     icon: 'success',
-    title: 'Thank you for your donation',
+    title: 'You are good person',
     showConfirmButton: false,
     timer: 2000
   });
