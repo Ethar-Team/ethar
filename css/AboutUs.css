@@ -19,8 +19,8 @@ body{
   position: relative; 
   border-radius: 50%;
   cursor: pointer;
-  width: 25%;
-  left:2%;
+  width: 40%;
+  left:33%;
 }
 #secone .eachone .imgs:hover {
     opacity: 0.5;
@@ -32,9 +32,10 @@ body{
     padding-left:20px;
 } */
 #sectwo{
-    float: left;
-    padding-left: 100px;
-    padding-top: 30px;
+    float: right;
+    margin-right: 30%;
+    padding-top: 30px; 
+    width:30%;
 }
 main{
     position: relative;
@@ -55,7 +56,11 @@ main h1{
     padding-left: 10px;
 }
 #secthree {
-    width: 70%;
+    float: right;
+    margin-right: 44%;
+    padding-top: 30px; 
+    width:30%;
+    /* width: 70%; */
 }
 #secthree h5{
     position:relative;
@@ -87,10 +92,24 @@ text-align: center;
 }
 #secone{
 float:left;
-width:40%;
+width:25%;
+background-color: #05314e46;
 }
-#secone .eachone.contentBx h3{
-/* margin: 20px 0 10px; */
+h3{
+    display: block;
+    font-size: 1em;
+    margin-block-start: 3em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: #05314e;
+    text-transform: uppercase;
+    /* margin-left:50%; */
+    margin-top: 6%;
+    text-align: center;
+
+/* margin: 20px 0 10px;
 letter-spacing: 2px;
 color: #05314e;
 text-transform: uppercase;
@@ -98,7 +117,7 @@ font-weight: 500;
 font-size: 15px;
 font-weight: bold;
 margin-left:6%;
-margin-top: 0%;
+margin-top: 0%; */
 /* text-align: center; */
 }
 .eachone .imgs{
@@ -110,3 +129,15 @@ margin-top: 0%;
     filter: grayscale(100%);
     transform: translateY(0);
 }
+#secone::-webkit-scrollbar {
+        width: 10px;
+}
+#secone::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+#secone::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  #secone::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
