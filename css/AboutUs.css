@@ -26,9 +26,9 @@ body{
     padding-left: 100px;
     padding-top: 30px;
     display: none;
+    min-block-size: 90vmax;
 }
 main{
-    position: relative;
     font-family: 'Anton', sans-serif;  
 }
 main h1{
@@ -94,7 +94,7 @@ text-align: center;
       margin-top: 7%;
       text-align: center;
       color: #ffffff;
-      background-color: #5e879b8a;
+      background-color: #0000008a;
       border-radius: 26px;
   }
 #sectwo .imageLarge{
