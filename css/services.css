@@ -4,8 +4,8 @@
 body{
     margin: 0;
     height: 100vh;
-    background-color: #fff;
-    /* position: absolute; */
+    background-color: rgb(222, 230, 236);
+
 
 }
 header{
@@ -80,7 +80,7 @@ font-size: 18px;
     color: #114E60;
     padding-left: 30px;
     padding-right: 30px;
-    background-color: #ebebeb;
+    background-color: rgb(222 230 236);
     z-index: 0;
 
 }
@@ -116,7 +116,7 @@ aside button{
 }
 #left input ,#left textarea {
   background-color: #ebebeb;
-  color: #f8f5f1;
+  color: black;
   display: block;
   margin: 2px auto;
   min-width: 300px;
@@ -177,11 +177,16 @@ aside button{
     position: relative;
 }
 #sectionTwo2 fieldset{
-    background-color: #d9dcdd;
+    /* background-color: #d9dcdd; */
+    background-color:rgb(222, 230, 236);
+    height: 160%;
+    width: 98%;
+    /* color:#114E60; */
 }
 #sectionTwo2 legend{
     text-align: center;
     font-size: xx-large;
+    color:#114E60;
 }
 
 #sectionTwo2 label{
@@ -191,17 +196,20 @@ aside button{
     margin-bottom: 1%;
     font-size: larger;
     font-weight:600;
+    color:#114E60
 
 
 }
 
 #sectionTwo2 input{
     display: block;
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 10px;
+    width: 98%;
+    height: 11%;
+    border-radius: 10px;
+    margin-bottom: 46px;
     margin-left: auto;
     margin-right: auto;
+    color:black;
 }
 
 
@@ -212,27 +220,27 @@ aside button{
     margin-left: auto;
     border:none;
     position: absolute;
-    color: rgb(177, 104, 104);
+    color: #114E60;
     top: 20px;
     right: 10px;
     font-size: x-large;
 }
 
 #submitAndFinish{
-    border: 2px solid rgb(104, 177, 104);;
+    border: 2px solid #114E60;
     border-radius: 16px;
-    color: rgb(104, 177, 104);;
+    color:#114E60 ;
     width: 100%;
     font-size: x-large;
     text-align: center;
 }
 #submitAndFinish:hover{
-    background-color: rgb(104, 177, 104);
+    background-color: #95b0b6;
     color: #ebebeb;
     transition: 0.8s;
 }
 #cancel:hover{
-    background-color: rgb(177, 104, 104);
+    background-color: #95b0b6;
     transition: 0.3s;
     color: #ebebeb;
 }
@@ -241,7 +249,8 @@ aside button{
         background-color: #ebebeb;
        width: 170px;
         height: 40px;
-        left: 210%;
+        left: -30%;
+        bottom: 1%;
         border-radius: 10px;
         font-size: large;
         border:0;
