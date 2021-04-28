@@ -234,6 +234,13 @@ function handleBook(event){
   saveToLsCust();
   closeForm();
   formForItem.remove();
+  Swal.fire({
+    position: 'center',
+    icon: 'success',
+    title: 'We will contact you',
+    showConfirmButton: false,
+    timer: 2000
+  });
 }
 function handlebutton(event){
   event.preventDefault();
