@@ -1,3 +1,4 @@
+/* eslint-disable no-trailing-spaces */
 'use strict';
 let container =document.getElementById('secone');
 let showEl = document.getElementById('sectwo');
@@ -14,12 +15,12 @@ function About (name,breif,linkedin,github,imgUrl){
 }
 About.allPeople=[];
 //adding the instances
-new About('Ayyoub Alkeyyam','I graduated from Yarmouk University with a major in Civil Engineering.','http://www.linkedin.com/in/ayyoubk','https://github.com/ayyoubk','/images/Ayyoub.jpg');
-new About ('Shatha Alsmadi','I graduated from Hashemite University with a major in Software Engineering.','https://www.linkedin.com/in/shatha-al-smadi-5348021ab/','https://github.com/shathasmadi','/images/Shatha.jpg');
-new About ('Roaa Mustafa','I graduated from Al-Balqa University with a major in Telecommunication Engineering.','https://www.linkedin.com/in/roaa-mustafa98/','https://github.com/RoaaMustafa','/images/Roaa.jpg');
-new About ('Anas Abu-Galiha','I graduated from Tafila Technical University with a major in Civil Engineering.','https://www.linkedin.com/in/anas-abughalieh-68b73a194/','https://github.com/AnasAGc','/images/Anas.jpg');
-new About ('Abdullah Elian','I graduated from the University of Jordan with a major in Computer Science','http://www.linkedin.com/in/abdullah-elian','https://github.com/AbdullahElian1','/images/Abdullah.jpg');
-new About('Mohammad Hayagneh ','I graduated from Yarmouk University  with a major in Electrical engineering','https://www.linkedin.com/in/mohammad-hayajneh-2ab099124/','https://github.com/mohammadhayajneh2014','/images/Mohammed.jpg');
+new About('Ayyoub Alkeyyam','I graduated from Yarmouk University with a major in Civil Engineering.','http://www.linkedin.com/in/ayyoubk','https://github.com/ayyoubk','images/Ayyoub.jpg');
+new About ('Shatha Alsmadi','I graduated from Hashemite University with a major in Software Engineering.','https://www.linkedin.com/in/shatha-al-smadi-5348021ab/','https://github.com/shathasmadi','images/Shatha.jpg');
+new About ('Roaa Mustafa','I graduated from Al-Balqa University with a major in Telecommunication Engineering.','https://www.linkedin.com/in/roaa-mustafa98/','https://github.com/RoaaMustafa','images/Roaa.jpg');
+new About ('Anas Abu-Galiha','I graduated from Tafila Technical University with a major in Civil Engineering.','https://www.linkedin.com/in/anas-abughalieh-68b73a194/','https://github.com/AnasAGc','images/Anas.jpg');
+new About ('Abdullah Elian','I graduated from the University of Jordan with a major in Computer Science','http://www.linkedin.com/in/abdullah-elian','https://github.com/AbdullahElian1','images/Abdullah.jpg');
+new About('Mohammad Hayagneh ','I graduated from Yarmouk University  with a major in Electrical engineering','https://www.linkedin.com/in/mohammad-hayajneh-2ab099124/','https://github.com/mohammadhayajneh2014','images/Mohammed.jpg');
 
 let imgEl=document.createElement('img');
 function renderImg(index){
@@ -31,7 +32,7 @@ function renderImg(index){
   imgEl.setAttribute('class','imageLarge');
 }
 
-let divForText=document.createElement('div');;
+let divForText=document.createElement('div');
 
 function renderText(index){
   divForText=document.createElement('div');
@@ -47,14 +48,14 @@ function renderText(index){
   divForText.appendChild(linkOne);
   let holdLink=document.createElement('img');
   linkOne.appendChild(holdLink);
-  holdLink.setAttribute('src','/images/linkedin.png');
+  holdLink.setAttribute('src','images/linkedin.png');
   holdLink.setAttribute('class','link');
   let linkTwo =document.createElement('a');
   linkTwo.setAttribute('href',`${About.allPeople[index].githubAcc}`);
   divForText.appendChild(linkTwo);
   let holdLink2=document.createElement('img');
   linkTwo.appendChild(holdLink2);
-  holdLink2.setAttribute('src','/images/github.png');
+  holdLink2.setAttribute('src','images/github.png');
   holdLink2.setAttribute('class','link');
 }
 
