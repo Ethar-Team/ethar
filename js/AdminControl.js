@@ -77,7 +77,7 @@ containerForJoin.appendChild(headerJoin);
 headerJoin.textContent='Joining Requests';
 let tableForJoin=document.createElement('table');
 containerForJoin.appendChild(tableForJoin);
-headerTable();
+
 function headerRowOfJoin(){
   let joinRow=document.createElement('tr');
   tableForJoin.appendChild(joinRow);
