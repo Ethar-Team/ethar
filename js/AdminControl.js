@@ -33,7 +33,14 @@ function headerTable(){
 if (bookingInfo !== null){
   custinfoTable();
 }else{
-  alert('Local storage of booking info is empty');
+ 
+  // Swal.fire({
+  //   position: 'center',
+  //   icon: 'success',
+  //   title: 'We will contact you',
+  //   showConfirmButton: false,
+  //   timer: 2000
+  // });
 }
 
 function custinfoTable(){
@@ -70,8 +77,7 @@ containerForJoin.appendChild(headerJoin);
 headerJoin.textContent='Joining Requests';
 let tableForJoin=document.createElement('table');
 containerForJoin.appendChild(tableForJoin);
-tableForJoin.setAttribute('id','tableForJoin');
-// headerRowOfJoin();
+
 function headerRowOfJoin(){
   let joinRow=document.createElement('tr');
   tableForJoin.appendChild(joinRow);
@@ -103,7 +109,7 @@ function headerRowOfJoin(){
 if (joinRequest !== null){
   headerRowOfJoin();
 }else{
-  alert('Local storage of Joining Requests is empty');
+  // alert('Local storage of Joining Requests is empty');
 }
 
 // getting service info to admin
@@ -118,6 +124,7 @@ headerServ.textContent='serviceRequest';
 let tableForServ=document.createElement('table');
 containerForService.appendChild(tableForServ);
 tableForServ.setAttribute('id','tableForService');
+
 
 function headerRowOfService(){
   let servRow=document.createElement('tr');
@@ -149,7 +156,7 @@ function headerRowOfService(){
 if (serviceRequest !== null){
   headerRowOfService();
 }else{
-  alert('Local storage of Service Request is empty');
+  // alert('Local storage of Service Request is empty');
 }
 
 
