@@ -21,7 +21,6 @@ main{
 }
 .table1{
     margin-left: 30%;
-    font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 40%;
     box-shadow: 5px 10px 20px #000000 ;
@@ -56,14 +55,12 @@ th {
   }
 #tableForJoin{
     margin-left: 30%;
-    font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 40%;
     box-shadow: 5px 10px 20px #000000 ;
 }
 #tableForService{
     margin-left: 30%;
-    font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 40%;
     box-shadow: 5px 10px 20px #000000 ;
