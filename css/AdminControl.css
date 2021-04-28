@@ -19,7 +19,6 @@ main{
     text-align: center;  
     position: relative;
 }
-
 .table1{
     margin-left: 30%;
     border-collapse: collapse;
@@ -42,22 +41,17 @@ tr:nth-child(odd){
 }
 tr:nth-child(odd):hover {
     background-color:rgb(190, 190, 190);
-    
     color: black;
 } 
-
 tr:nth-child(even):hover {
     background-color:  rgb(190, 190, 190);
     color: white;
-    
 }
-
-
 th {
     padding-top: 12px;
     padding-bottom: 12px;
     background-color: #000000dc;
-    color: #ffffff;
+    color: #FFFFFF;
   }
 #tableForJoin{
     margin-left: 30%;
@@ -78,7 +72,4 @@ main img{
     margin-top: 7%;
     margin-left: auto;   
     margin-right: auto;
-    
 }
-
-

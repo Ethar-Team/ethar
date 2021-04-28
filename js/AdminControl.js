@@ -5,8 +5,6 @@
 let bookingInfo =localStorage.getItem('CustInfo');
 bookingInfo=JSON.parse(bookingInfo);
 console.log(bookingInfo);
-
-
 let container = document.getElementById('donationpage');
 let heading = document.createElement('h2');
 container.appendChild(heading);
@@ -18,32 +16,19 @@ headerTable();
 function headerTable(){
   let tableRow=document.createElement('tr');
   table.appendChild(tableRow);
-
   let tableHeader=document.createElement('th');
   tableRow.appendChild(tableHeader);
   tableHeader.textContent='client Name';
-
   let tableHeader1=document.createElement('th');
   tableRow.appendChild(tableHeader1);
   tableHeader1.textContent='Contact Info';
-
   let tableHeader2=document.createElement('th');
   tableRow.appendChild(tableHeader2);
   tableHeader2.textContent='Item Number';
 }
 if (bookingInfo !== null){
   custinfoTable();
-}else{
- 
-  // Swal.fire({
-  //   position: 'center',
-  //   icon: 'success',
-  //   title: 'We will contact you',
-  //   showConfirmButton: false,
-  //   timer: 2000
-  // });
 }
-
 function custinfoTable(){
   for(let i=0;i<bookingInfo.length;i++){
     let newRow=document.createElement('tr');
@@ -51,34 +36,27 @@ function custinfoTable(){
     let tableData=document.createElement('td');
     newRow.appendChild(tableData);
     tableData.textContent=bookingInfo[i].name;
-
     let tableData1=document.createElement('td');
     newRow.appendChild(tableData1);
     tableData1.textContent=bookingInfo[i].contact;
-
     let tableData2=document.createElement('td');
     newRow.appendChild(tableData2);
     tableData2.textContent=bookingInfo[i].idOfItem;
-
   }
-
 }
-
-
 //getting join us info to admin
 let joinRequest =localStorage.getItem('workerform');
 console.log(joinRequest);
 joinRequest=JSON.parse(joinRequest);
 console.log(joinRequest);
 let containerForJoin =document.getElementById('joinRequest');
-
-
 let headerJoin=document.createElement('h2');
 containerForJoin.appendChild(headerJoin);
 headerJoin.textContent='Joining Requests';
 let tableForJoin=document.createElement('table');
 containerForJoin.appendChild(tableForJoin);
-
+tableForJoin.setAttribute('id','tableForJoin');
+// headerRowOfJoin();
 function headerRowOfJoin(){
   let joinRow=document.createElement('tr');
   tableForJoin.appendChild(joinRow);
@@ -106,27 +84,19 @@ function headerRowOfJoin(){
     contactData.textContent=`${joinRequest[i].ContactNumberr}`;
   }
 }
-
 if (joinRequest !== null){
   headerRowOfJoin();
-}else{
-  // alert('Local storage of Joining Requests is empty');
 }
-
 // getting service info to admin
 let serviceRequest =localStorage.getItem('volunteer');
 serviceRequest=JSON.parse(serviceRequest);
 let containerForService=document.getElementById('serviceRequest');
-
-
 let headerServ=document.createElement('h2');
 containerForService.appendChild(headerServ);
 headerServ.textContent='serviceRequest';
 let tableForServ=document.createElement('table');
 containerForService.appendChild(tableForServ);
 tableForServ.setAttribute('id','tableForService');
-
-
 function headerRowOfService(){
   let servRow=document.createElement('tr');
   tableForServ.appendChild(servRow);
@@ -156,14 +126,4 @@ function headerRowOfService(){
 }
 if (serviceRequest !== null){
   headerRowOfService();
-}else{
-  // alert('Local storage of Service Request is empty');
 }
-
-
-
-
-
-
-
-
