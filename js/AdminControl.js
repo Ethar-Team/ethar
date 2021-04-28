@@ -27,8 +27,6 @@ function headerTable(){
 }
 if (bookingInfo !== null){
   custinfoTable();
-}else{
-  alert('Local storage of booking info is empty');
 }
 function custinfoTable(){
   for(let i=0;i<bookingInfo.length;i++){
@@ -87,8 +85,6 @@ function headerRowOfJoin(){
 }
 if (joinRequest !== null){
   headerRowOfJoin();
-}else{
-  alert('Local storage of Joining Requests is empty');
 }
 // getting service info to admin
 let serviceRequest =localStorage.getItem('volunteer');
@@ -129,6 +125,4 @@ function headerRowOfService(){
 }
 if (serviceRequest !== null){
   headerRowOfService();
-}else{
-  alert('Local storage of Service Request is empty');
 }
