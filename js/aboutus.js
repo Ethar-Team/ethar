@@ -24,14 +24,14 @@ new About('Mohammad Hayagneh ','I graduated from Yarmouk University  with a majo
 let imgEl=document.createElement('img');
 function renderImg(index){
 
-  
+
   imgEl.setAttribute('id','img');
   imgEl.setAttribute('src',`${About.allPeople[index].imgUrl}`);
   showEl.appendChild(imgEl);
   imgEl.setAttribute('class','imageLarge');
 }
 
-let divForText=document.createElement('div');;
+let divForText=document.createElement('div');
 
 function renderText(index){
   divForText=document.createElement('div');

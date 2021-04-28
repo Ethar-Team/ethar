@@ -33,7 +33,7 @@ function headerTable(){
 if (bookingInfo !== null){
   custinfoTable();
 }else{
- 
+
   // Swal.fire({
   //   position: 'center',
   //   icon: 'success',
