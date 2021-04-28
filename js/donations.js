@@ -270,7 +270,7 @@ function getNumberFromString(divIdNumber){
 
 function unPic(indexOf){
   let unavalible=document.createElement('img');
-  unavalible.setAttribute('src','/images/download.png');
+  unavalible.setAttribute('src','../images/download.png');
   unavalible.setAttribute('class','absImg');
   let div=document.getElementById(`item${indexOf}`);
   div.appendChild(unavalible);
