@@ -19,10 +19,8 @@ main{
     text-align: center;  
     position: relative;
 }
-
 .table1{
     margin-left: 30%;
-    font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 40%;
     box-shadow: 5px 10px 20px #000000 ;
@@ -43,33 +41,26 @@ tr:nth-child(odd){
 }
 tr:nth-child(odd):hover {
     background-color:rgb(190, 190, 190);
-    
     color: black;
 } 
-
 tr:nth-child(even):hover {
     background-color:  rgb(190, 190, 190);
     color: white;
-    
 }
-
-
 th {
     padding-top: 12px;
     padding-bottom: 12px;
     background-color: #000000dc;
-    color: #ffffff;
+    color: #FFFFFF;
   }
 #tableForJoin{
     margin-left: 30%;
-    font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 40%;
     box-shadow: 5px 10px 20px #000000 ;
 }
 #tableForService{
     margin-left: 30%;
-    font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 40%;
     box-shadow: 5px 10px 20px #000000 ;
@@ -81,7 +72,4 @@ main img{
     margin-top: 7%;
     margin-left: auto;   
     margin-right: auto;
-    
 }
-
-

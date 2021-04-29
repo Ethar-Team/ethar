@@ -1,3 +1,4 @@
+/* eslint-disable no-var */
 var slideshows = document.querySelectorAll('[data-component="slideshow"]');
 
 // Apply to all slideshows that you define with the markup wrote
@@ -7,7 +8,7 @@ function initSlideShow(slideshow) {
 
   let slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .slide`); // Get an array of slides
 
-  let index = 0, time = 5000;
+  let index = 0, time = 3000;
   slides[index].classList.add('active');
 
   setInterval( () => {
